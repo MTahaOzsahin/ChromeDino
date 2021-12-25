@@ -17,12 +17,24 @@ public class CharacterMovement : MonoBehaviour
    public float walkingspeed;
    public float runningspeed;
 
+    [Header("AnimationController")]
+    public MovementStates movementState;
+    private CharacterAnimationController animController;
+    
+    public enum MovementStates
+    {
+        Idle,
+        Walking,
+        WalkingUp,
+        WalkingDown,
+    }
+
 
     private void Awake()
     {
         maincharacterrb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-       
+        animController = GetComponent<CharacterAnimationController>();
     }
 
     void Charactermovement()
@@ -32,16 +44,13 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
-            {
-                animator.SetBool("isWalking", false);
-                animator.SetBool("isRunning", true);
+            {               
                 maincharacterrb2d.velocity = new Vector2(runningspeed, 0f);
                 transform.eulerAngles = new Vector2(0, 0);
+                
             }
             else
-            {
-                animator.SetBool("isWalking", true);
-                animator.SetBool("isRunning", false);
+            {               
                 maincharacterrb2d.velocity = new Vector2(walkingspeed, 0f);
                 transform.eulerAngles = new Vector2(0, 0);
             }
@@ -50,29 +59,43 @@ public class CharacterMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.A))
         {
             if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
-            {
-                animator.SetBool("isWalking", false);
-                animator.SetBool("isRunning", true);               
+            {                            
                 maincharacterrb2d.velocity = new Vector2(-runningspeed, 0f);
                 transform.eulerAngles = new Vector2(0, 180);
             }
             else
-            {
-                animator.SetBool("isWalking", true);
-                animator.SetBool("isRunning", false);
+            {               
                 maincharacterrb2d.velocity = new Vector2(-walkingspeed, 0f);
                 transform.eulerAngles = new Vector2(0, 180);
             }
             
         }
-        else
+        else if (Input.GetKey(KeyCode.W))
         {
-            animator.SetBool("isRunning", false);
-            animator.SetBool("isWalking", false);
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+            {               
+                maincharacterrb2d.velocity = new Vector2(0f, runningspeed);
+            }
+            else
+            {               
+                maincharacterrb2d.velocity = new Vector2(0f, walkingspeed);
+            }
         }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift))
+            {
+                maincharacterrb2d.velocity = new Vector2(0f, -runningspeed);
+            }
+            else
+            {               
+                maincharacterrb2d.velocity = new Vector2(0f, -walkingspeed);
+            }
+        }
+        
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    //Teleporttain 
+    private void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.CompareTag("teleportblue2"))
         {
@@ -97,9 +120,33 @@ public class CharacterMovement : MonoBehaviour
 
     }
     
-
+    public void PlayAnimationBasedOnState()
+    {
+        switch (movementState)
+        {
+            case MovementStates.Idle:
+                animController.PlayIdleAnim();
+                break;         
+            case MovementStates.Walking:
+                animController.PlayWalkingAnim();
+                break;           
+            case MovementStates.WalkingUp:
+                animController.PlayWalkingUpAnim();
+                break;
+            case MovementStates.WalkingDown:
+                animController.PlayWalkingDownAnim();
+                break;
+            default:
+                break;
+        }
+    }
+    public void SetMovementState(MovementStates movementStates)
+    {
+        movementState = movementStates;
+    }
     private void FixedUpdate()
     {
         Charactermovement();
+        PlayAnimationBasedOnState();
     }
 }

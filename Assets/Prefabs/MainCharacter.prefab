@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 137419376375780640}
   - component: {fileID: 8256244980802376581}
   - component: {fileID: 6948365422445056585}
+  - component: {fileID: -7441977521899203198}
+  - component: {fileID: 537899483901837347}
   - component: {fileID: 8464805458588900596}
   m_Layer: 0
   m_Name: MainCharacter
@@ -147,8 +149,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maincharacterrb2d: {fileID: 0}
   animator: {fileID: 0}
+  teleport1: {fileID: 0}
+  teleport2: {fileID: 0}
+  teleport3: {fileID: 0}
+  teleport4: {fileID: 0}
   walkingspeed: 3
   runningspeed: 5
+  movementState: 0
+--- !u!114 &-7441977521899203198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591678998522283357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c9d08f853309b41b285b29e26539e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  Charachterrb2D: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+--- !u!114 &537899483901837347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591678998522283357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1b62278d968d6429cb1637ad3c35d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &8464805458588900596
 Animator:
   serializedVersion: 3
