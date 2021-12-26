@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3287402314943692477}
   - component: {fileID: 33878288668056840}
   - component: {fileID: 1304722171465975212}
-  - component: {fileID: 5153848554005160378}
   m_Layer: 0
   m_Name: doorsOrange
   m_TagString: Untagged
@@ -110,16 +109,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7066667, y: 1.7066667}
   m_EdgeRadius: 0
---- !u!114 &5153848554005160378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5510048132677849096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94f68656e70dc33459a0c7b894e2407e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorscollider: {fileID: 0}

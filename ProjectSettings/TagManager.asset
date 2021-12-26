@@ -11,6 +11,7 @@ TagManager:
   - teleportblue2
   - teleportblue3
   - teleportblue4
+  - Item
   layers:
   - Default
   - TransparentFX
