@@ -12,6 +12,10 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public Sprite slotEmpty, slotHighlight;
 
+   
+
+    
+
     public bool IsEmpty
     {
         get { return items.Count == 0; }
@@ -99,7 +103,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Right)
+        if (eventData.button == PointerEventData.InputButton.Right && GameObject.Find("Hover") && Inventory.CanvasGroup.alpha > 0)
         {
             useItem();
         }
@@ -111,4 +115,12 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         ChangeSprite(slotEmpty, slotHighlight);
         stackTxt.text = string.Empty;
     }
+
+
+    
+
+
+
+
+
 }

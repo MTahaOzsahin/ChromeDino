@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3303319178789561210}
   - component: {fileID: 2523706448796892811}
   - component: {fileID: 3912580519423564486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TeleportBlue1
   m_TagString: teleportblue
   m_Icon: {fileID: 0}
