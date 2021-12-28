@@ -113,26 +113,22 @@ public class CharacterMovement : MonoBehaviour
         
         
     }
-    //Teleporttain Devam edielcek
-    private void OnTriggerEnter2D(Collider2D collision) 
+
+   
+    //Teleporttain geri dönülecek
+    public void OnTriggerEnter2D(Collider2D collision) 
     {
-        if ( collision.CompareTag("teleportblue2") && IsTeleport())
+        
+        if ( collision.CompareTag("teleportblue2"))
         {
             maincharacterrb2d.transform.position = new Vector3(teleport1.transform.position.x - 1, teleport1.transform.position.y,
                 maincharacterrb2d.transform.position.z);
-        }
-        else  if (IsTeleport() && Input.GetKeyDown(KeyCode.Space))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport2.transform.position.x + 1, teleport2.transform.position.y,
-                maincharacterrb2d.transform.position.z);          
-        }
-        /*
-        else if (collision.CompareTag("teleportblue1") && IsTeleport())
+        }               
+        else if (collision.CompareTag("teleportblue1"))
         {
             maincharacterrb2d.transform.position = new Vector3(teleport2.transform.position.x + 1, teleport2.transform.position.y,
                 maincharacterrb2d.transform.position.z);
-        }
-        */
+        }       
         else if (collision.CompareTag("teleportblue3"))
         {
             maincharacterrb2d.transform.position = new Vector3(teleport4.transform.position.x + 1, teleport4.transform.position.y,
@@ -144,7 +140,7 @@ public class CharacterMovement : MonoBehaviour
                 maincharacterrb2d.transform.position.z);
         }
         
-
+        
     }
    
     public bool IsClimbAvaible()
@@ -155,10 +151,10 @@ public class CharacterMovement : MonoBehaviour
 
         return raycastHit2D.collider != null;
     }
-    public bool IsTeleport()
+    public bool IsTeleportNear()
     {
         RaycastHit2D raycastHitTeleport2D = Physics2D.BoxCast(maincharactersr.bounds.center, maincharactersr.bounds.size, 0f,
-            Vector2.right, 0.25f, teleportLayerMask);
+            Vector2.right, 1f, teleportLayerMask);
 
         return raycastHitTeleport2D.collider != null;
     }
@@ -191,5 +187,6 @@ public class CharacterMovement : MonoBehaviour
     {
         Charactermovement();
         PlayAnimationBasedOnState();
+        
     }
 }

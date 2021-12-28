@@ -34,6 +34,15 @@ public class Inventory : MonoBehaviour
 
     private static int emptySlots;
 
+    private static GameObject clicked;
+
+    public GameObject selectStackSize;
+    public Text stackText;
+    private int splitAmount;
+    private int maxStackCount;
+    private static Slot movingSlot;
+
+
     bool fadingIn;
     bool fadingOut;
 
@@ -41,6 +50,19 @@ public class Inventory : MonoBehaviour
 
     public static int EmptySlots { get => emptySlots; set => emptySlots = value; }
     public static CanvasGroup CanvasGroup { get => canvasGroup;}
+    public static Inventory Instance 
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = GameObject.FindObjectOfType<Inventory>();
+            }
+            return Inventory.instance;
+        }
+    }
+
+    private static Inventory instance;
 
     void CreateLayout ()
     {
@@ -87,50 +109,7 @@ public class Inventory : MonoBehaviour
 
     }
 
-    private void Start()
-    {
-        canvasGroup = transform.parent.GetComponent<CanvasGroup>();
-
-        CreateLayout();
-    }
-    private void Update()
-    {
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (!eventSystem.IsPointerOverGameObject(-1) && from != null)
-            {
-                from.GetComponent<Image>().color = Color.white;
-                from.ClearSlot();
-                Destroy(GameObject.Find("Hover"));
-                to = null;
-                from = null;
-                
-                emptySlots++;
-            }
-        }
-        if (hoverObject != null)
-        {
-            Vector2 position;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition,
-                canvas.worldCamera, out position);
-            position.Set(position.x, position.y - hoverYOffset);
-            hoverObject.transform.position = canvas.transform.TransformPoint(position);
-        }
-        if (Input.GetKeyDown(KeyCode.B)) // Olmadý
-        {
-            if (canvasGroup.alpha > 0)
-            {
-                StartCoroutine("FadeOut");
-                PutItemBack();
-
-            }
-            else
-            {
-                StartCoroutine("FadeIn");
-
-            }
-        }
-    }
+   
 
     
     public bool AddItem(Item item)
@@ -150,8 +129,16 @@ public class Inventory : MonoBehaviour
                 {
                     if (tmp.CurrentItem.type == item.type && tmp.IsAvaible)
                     {
-                        tmp.AddItem(item);
-                        return true;
+                        if (!movingSlot.IsEmpty && clicked.GetComponent<Slot>() == tmp.GetComponent<Slot>())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            tmp.AddItem(item);
+                            return true;
+                        }
+                        
 
                     }
                 }
@@ -183,31 +170,35 @@ public class Inventory : MonoBehaviour
 
     public void MoveItem(GameObject clicked)
     {
-        if (from == null && canvasGroup.alpha == 1)
+        Inventory.clicked = clicked;
+
+        if (!movingSlot.IsEmpty)
+        {
+            Slot tmp = clicked.GetComponent<Slot>();
+
+            if (tmp.IsEmpty)
+            {
+                tmp.AddItems(movingSlot.Items);
+                movingSlot.Items.Clear();
+                Destroy(GameObject.Find("Hover"));
+            }
+            else if (!tmp.IsEmpty && movingSlot.CurrentItem.type == tmp.CurrentItem.type && tmp.IsAvaible)
+            {
+                MergeStacks(movingSlot, tmp);
+            }
+        }
+        else if (from == null && canvasGroup.alpha == 1 && !Input.GetKey(KeyCode.LeftShift))
         {
             if (!clicked.GetComponent<Slot>().IsEmpty)
             {
                 from = clicked.GetComponent<Slot>();
                 from.GetComponent<Image>().color = Color.gray;
-
-                hoverObject = (GameObject)Instantiate(iconPrefab);
-                hoverObject.GetComponent<Image>().sprite = clicked.GetComponent<Image>().sprite;
-                hoverObject.name = "Hover";
-
-
-                RectTransform hoverTransform = hoverObject.GetComponent<RectTransform>();
-                RectTransform clickedTransform = clicked.GetComponent<RectTransform>();
-
-                hoverTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, clickedTransform.sizeDelta.x);
-                hoverTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, clickedTransform.sizeDelta.y);
-
-                hoverObject.transform.SetParent(GameObject.Find("Canvas").transform, true);
-
-                hoverObject.transform.localScale = from.gameObject.transform.localScale;
+                CreateHoverIcon();
+               
             }
         }
 
-        else if (to == null)
+        else if (to == null && !Input.GetKey(KeyCode.LeftShift))
         {
             to = clicked.GetComponent<Slot>();
             Destroy(GameObject.Find("Hover"));
@@ -234,6 +225,26 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    void CreateHoverIcon()
+    {
+        hoverObject = (GameObject)Instantiate(iconPrefab);
+        hoverObject.GetComponent<Image>().sprite = clicked.GetComponent<Image>().sprite;
+        hoverObject.name = "Hover";
+
+
+        RectTransform hoverTransform = hoverObject.GetComponent<RectTransform>();
+        RectTransform clickedTransform = clicked.GetComponent<RectTransform>();
+
+        hoverTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, clickedTransform.sizeDelta.x);
+        hoverTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, clickedTransform.sizeDelta.y);
+
+        hoverObject.transform.SetParent(GameObject.Find("Canvas").transform, true);
+
+        hoverObject.transform.localScale = clicked.gameObject.transform.localScale;
+
+        hoverObject.transform.GetChild(0).GetComponent<Text>().text = movingSlot.Items.Count > 1 ? movingSlot.Items.Count.ToString() : string.Empty;
+    }
+
     void PutItemBack()
     {
         if (from != null)
@@ -241,6 +252,73 @@ public class Inventory : MonoBehaviour
             Destroy(GameObject.Find("Hover"));
             from.GetComponent<Image>().color = Color.white;
             from = null;
+        }
+        else if (!movingSlot.IsEmpty)
+        {
+            Destroy(GameObject.Find("Hover"));
+            foreach (Item item in movingSlot.Items)
+            {
+                clicked.GetComponent<Slot>().AddItem(item);
+
+            }
+            movingSlot.ClearSlot();
+        }
+        selectStackSize.SetActive(false);
+    }
+
+    public void SetStackInfo(int maxStackCount)
+    {
+        selectStackSize.SetActive(true);
+        splitAmount = 0;
+        this.maxStackCount = maxStackCount;
+        stackText.text = splitAmount.ToString();
+    }
+
+    public void SplitStack()
+    {
+        selectStackSize.SetActive(false);
+
+        if (splitAmount == maxStackCount)
+        {
+            MoveItem(clicked);
+        }
+        else if (splitAmount > 0)
+        {
+            movingSlot.Items = clicked.GetComponent<Slot>().RemoveItems(splitAmount);
+
+            CreateHoverIcon();
+        }
+    }
+    
+    public void ChangeStackText (int i)
+    {
+        splitAmount += i;
+        if (splitAmount < 0)
+        {
+            splitAmount = 0;
+        }
+        if (splitAmount > maxStackCount)
+        {
+            splitAmount = maxStackCount;
+        }
+
+        stackText.text = splitAmount.ToString();
+    }
+    public void MergeStacks(Slot source, Slot destination)
+    {
+        int max = destination.CurrentItem.maxSize - destination.Items.Count;
+
+        int count = source.Items.Count < max ? source.Items.Count : max;
+
+        for (int i = 0; i < count; i++)
+        {
+            destination.AddItem(source.RemoveItem());
+            hoverObject.transform.GetChild(0).GetComponent<Text>().text = movingSlot.Items.Count.ToString();
+        }
+        if (source.Items.Count == 0)
+        {
+            source.ClearSlot();
+            Destroy(GameObject.Find("Hover"));
         }
     }
     private IEnumerator FadeOut()
@@ -274,6 +352,7 @@ public class Inventory : MonoBehaviour
     }
     private IEnumerator FadeIn()
     {
+        fadingIn = true;
         if (fadingIn)
         {
             fadingOut = false;
@@ -297,6 +376,58 @@ public class Inventory : MonoBehaviour
             }
             canvasGroup.alpha = 1;
             fadingIn = false;
+        }
+    }
+
+    private void Start()
+    {
+        canvasGroup = transform.parent.GetComponent<CanvasGroup>();
+
+        CreateLayout();
+
+        movingSlot = GameObject.Find("MovingSlot").GetComponent<Slot>();
+    }
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (!eventSystem.IsPointerOverGameObject(-1) && from != null)
+            {
+                from.GetComponent<Image>().color = Color.white;
+                from.ClearSlot();
+                Destroy(GameObject.Find("Hover"));
+                to = null;
+                from = null;
+
+                emptySlots++;
+            }
+            else if (!eventSystem.IsPointerOverGameObject(-1) && !movingSlot.IsEmpty)
+            {
+                movingSlot.ClearSlot();
+                Destroy(GameObject.Find("Hover"));
+            }
+        }
+        if (hoverObject != null)
+        {
+            Vector2 position;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition,
+                canvas.worldCamera, out position);
+            position.Set(position.x, position.y - hoverYOffset);
+            hoverObject.transform.position = canvas.transform.TransformPoint(position);
+        }
+        if (Input.GetKeyDown(KeyCode.B)) // Olmadý
+        {
+            if (canvasGroup.alpha > 0)
+            {
+                StartCoroutine("FadeOut");
+                PutItemBack();
+
+            }
+            else
+            {
+                StartCoroutine("FadeIn");
+
+            }
         }
     }
 }
