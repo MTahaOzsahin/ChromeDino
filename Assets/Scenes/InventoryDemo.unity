@@ -534,9 +534,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1945326193}
     m_Modifications:
+    - target: {fileID: 2523706448796892811, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_Name
       value: TeleportBlue2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_TagString
@@ -641,6 +649,22 @@ PrefabInstance:
       propertyPath: teleportLayerMask.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 6948365422445056585, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+      propertyPath: teleport1LayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948365422445056585, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+      propertyPath: teleport2LayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948365422445056585, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+      propertyPath: teleport3LayerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948365422445056585, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+      propertyPath: teleport4LayerMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
     - target: {fileID: 8256244980802376581, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.28
@@ -655,11 +679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: 27.69
       objectReference: {fileID: 0}
     - target: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: 3.85
       objectReference: {fileID: 0}
     - target: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -946,9 +970,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1945326193}
     m_Modifications:
+    - target: {fileID: 2523706448796892811, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_Name
       value: TeleportBlue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_TagString
@@ -2190,7 +2222,7 @@ Transform:
   - {fileID: 489828108}
   - {fileID: 663689613}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1953130018 stripped
 Transform:
@@ -2427,7 +2459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5747403070229682683, guid: 25fa365d7d06e9a4c97d16973d148a52, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5747403070229682683, guid: 25fa365d7d06e9a4c97d16973d148a52, type: 3}
       propertyPath: m_AnchorMax.x
