@@ -113,12 +113,12 @@ public class CharacterMovement : MonoBehaviour
                 maincharacterrb2d.velocity = new Vector2(0f, -walkingspeed);
             }
         }
-        else if (IsTeleportNear1() && Input.GetKey(KeyCode.Space))
+        else if (IsTeleportNear1() && Input.GetKeyDown(KeyCode.Space))
         {
             maincharacterrb2d.transform.position = new Vector3(teleport2.transform.position.x + 1, teleport2.transform.position.y,
                maincharacterrb2d.transform.position.z);
         }
-        else if (IsTeleportNear2() && Input.GetKey(KeyCode.Space))
+        else if (IsTeleportNear2() && Input.GetKeyDown(KeyCode.Space))
         {
             maincharacterrb2d.transform.position = new Vector3(teleport1.transform.position.x + 1, teleport1.transform.position.y,
                maincharacterrb2d.transform.position.z);
