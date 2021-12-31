@@ -13,10 +13,7 @@ public class CharacterMovement : MonoBehaviour
     public GameObject teleport3;
     public GameObject teleport4;
     public LayerMask ladderLayerMask;
-    public LayerMask teleport1LayerMask;
-    public LayerMask teleport2LayerMask;
-    public LayerMask teleport3LayerMask;
-    public LayerMask teleport4LayerMask;
+    
 
 
     [Header("Variables")]
@@ -113,28 +110,7 @@ public class CharacterMovement : MonoBehaviour
                 maincharacterrb2d.velocity = new Vector2(0f, -walkingspeed);
             }
         }
-        else if (IsTeleportNear1() && Input.GetKeyDown(KeyCode.Space))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport2.transform.position.x + 1, teleport2.transform.position.y,
-               maincharacterrb2d.transform.position.z);
-        }
-        else if (IsTeleportNear2() && Input.GetKeyDown(KeyCode.Space))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport1.transform.position.x + 1, teleport1.transform.position.y,
-               maincharacterrb2d.transform.position.z);
-        }
-        else if (IsTeleportNear3() && Input.GetKey(KeyCode.Space))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport4.transform.position.x + 1, teleport4.transform.position.y,
-               maincharacterrb2d.transform.position.z);
-        }
-        else if (IsTeleportNear4() && Input.GetKey(KeyCode.Space))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport3.transform.position.x + 1, teleport3.transform.position.y,
-               maincharacterrb2d.transform.position.z);
-        }
-
-
+        
 
     }
 
@@ -179,58 +155,7 @@ public class CharacterMovement : MonoBehaviour
     }
    
 
-    public bool IsTeleportNear1()
-    {
-        Collider2D collider = Physics2D.OverlapCircle(maincharactersr.bounds.center, 2f, teleport1LayerMask);
-        if (collider !=null)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-            
-        }
-    }
-    public bool IsTeleportNear2()
-    {
-        Collider2D collider = Physics2D.OverlapCircle(maincharactersr.bounds.center, 2f, teleport2LayerMask);
-        if (collider != null)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-
-        }
-    }
-    public bool IsTeleportNear3()
-    {
-        Collider2D collider = Physics2D.OverlapCircle(maincharactersr.bounds.center, 2f, teleport3LayerMask);
-        if (collider != null)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-
-        }
-    }
-    public bool IsTeleportNear4()
-    {
-        Collider2D collider = Physics2D.OverlapCircle(maincharactersr.bounds.center, 2f, teleport4LayerMask);
-        if (collider != null)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-
-        }
-    }
+    
     public void PlayAnimationBasedOnState()
     {
         switch (movementState)

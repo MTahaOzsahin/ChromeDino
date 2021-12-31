@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
     public Rigidbody2D Charachterrb2D;
     public SpriteRenderer spriteRenderer;
     public Inventory inventory;
+    public Transform maincharactertransform;
 
 
     CharacterMovement characterMovement;
@@ -20,6 +21,7 @@ public class Character : MonoBehaviour
         animator = GetComponent<Animator>();
         Charachterrb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        maincharactertransform = GetComponent<Transform>();
     }
 
    public void SetCharacterState()

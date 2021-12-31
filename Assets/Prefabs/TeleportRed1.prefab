@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4115602317823964376}
   - component: {fileID: 7870439285470774342}
   - component: {fileID: 1256933646267661860}
+  - component: {fileID: 3324850962462411789}
+  - component: {fileID: 7261580998376767879}
   m_Layer: 7
   m_Name: TeleportRed1
   m_TagString: teleportred
@@ -109,3 +111,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43292624, y: 2.3625607}
   m_EdgeRadius: 0
+--- !u!95 &3324850962462411789
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566943933465817261}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f0fa589d9dff0548b8857fc5b193e8d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7261580998376767879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566943933465817261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7cc7c45525cf34b92894793c46fd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriterendererteleport: {fileID: 0}
+  MainCharacterLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3303319178789561210}
   - component: {fileID: 2523706448796892811}
   - component: {fileID: 3912580519423564486}
+  - component: {fileID: 5055777341473871408}
   m_Layer: 7
   m_Name: TeleportBlue1
   m_TagString: teleportblue
@@ -129,3 +130,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5055777341473871408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3620535616981506178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf4d08d449f5f14ca656faa8196d9ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriterendererteleport: {fileID: 0}
+  MainCharacterLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  teleport1: {fileID: 0}
+  teleport2: {fileID: 0}
+  teleport3: {fileID: 0}
+  teleport4: {fileID: 0}
+  maincharacter: {fileID: 3591678998522283357, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+  teleportdetection: 0
