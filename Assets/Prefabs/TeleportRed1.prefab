@@ -146,3 +146,9 @@ MonoBehaviour:
   MainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096
+  teleport1: {fileID: 0}
+  teleport2: {fileID: 0}
+  teleport3: {fileID: 0}
+  teleport4: {fileID: 0}
+  maincharacter: {fileID: 0}
+  teleportdetection: 0

@@ -22,15 +22,15 @@ public class TeleportBlue : TeleportBase, ITeleportation
     }
 
 
-
+    /*
     protected override bool IsMainCharacterNear()
     {
-        return base.IsMainCharacterNear();
+        //return base.IsMainCharacterNear();
     }
 
     private void FixedUpdate()
     {
-        Teleport();
+       // Teleport();
         Debug.Log(teleportdetection);
     }
 

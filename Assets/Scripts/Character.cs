@@ -11,9 +11,13 @@ public class Character : MonoBehaviour
     public Inventory inventory;
     public Transform maincharactertransform;
 
+    public LayerMask teleportLayerMask;
+
 
     CharacterMovement characterMovement;
 
+
+    public int a = 0;
 
     private void Awake()
     {
@@ -56,8 +60,31 @@ public class Character : MonoBehaviour
             inventory.AddItem(other.GetComponent<Item>());
         }
     }
+
+    public bool IsTeleportNear()
+    {
+        //buradan devam edielcek
+
+        Collider2D collider = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.25f, teleportLayerMask);
+        if (collider.CompareTag("teleportblue1") && collider != null)
+        {
+            a = 1;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+   
     private void FixedUpdate()
     {
         SetCharacterState();
+        if (IsTeleportNear())
+        {
+            Debug.Log("is near" + a);
+        }
     }
 }

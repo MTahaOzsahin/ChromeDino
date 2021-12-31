@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5055777341473871408}
   m_Layer: 7
   m_Name: TeleportBlue1
-  m_TagString: teleportblue
+  m_TagString: teleportblue1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   MainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  teleport1: {fileID: 0}
+  teleport1: {fileID: 3620535616981506178}
   teleport2: {fileID: 0}
   teleport3: {fileID: 0}
   teleport4: {fileID: 0}

@@ -177,6 +177,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   inventory: {fileID: 0}
   maincharactertransform: {fileID: 0}
+  teleportLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &537899483901837347
 MonoBehaviour:
   m_ObjectHideFlags: 0

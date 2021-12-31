@@ -167,10 +167,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleportBlue3
       objectReference: {fileID: 0}
-    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: m_TagString
-      value: teleportblue3
-      objectReference: {fileID: 0}
     - target: {fileID: 4693382089953860329, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -224,10 +220,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 814722763}
     - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: teleport3
-      value: 
-      objectReference: {fileID: 1042669812}
-    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: teleport4
       value: 
       objectReference: {fileID: 1172842306}
@@ -236,11 +228,6 @@ PrefabInstance:
 --- !u!1 &123676518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-  m_PrefabInstance: {fileID: 798830135}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &123676522 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3303319178789561210, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
   m_PrefabInstance: {fileID: 798830135}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &162575060 stripped
@@ -700,14 +687,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleportBlue1
       objectReference: {fileID: 0}
-    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: m_TagString
-      value: teleportblue1
-      objectReference: {fileID: 0}
     - target: {fileID: 4693382089953860329, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -753,10 +732,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: teleport1
-      value: 
-      objectReference: {fileID: 123676518}
-    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: teleport2
       value: 
       objectReference: {fileID: 814722763}
@@ -772,14 +747,6 @@ PrefabInstance:
       propertyPath: maincharacter
       value: 
       objectReference: {fileID: 162575060}
-    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: teleportbluesp
-      value: 
-      objectReference: {fileID: 123676522}
-    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: MainCharacterLayerMask.m_Bits
-      value: 4096
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
 --- !u!1 &814722763 stripped
@@ -875,10 +842,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleportBlue2
       objectReference: {fileID: 0}
-    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: m_TagString
-      value: teleportblue2
-      objectReference: {fileID: 0}
     - target: {fileID: 4693382089953860329, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -927,10 +890,6 @@ PrefabInstance:
       propertyPath: teleport1
       value: 
       objectReference: {fileID: 2135058372}
-    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: teleport2
-      value: 
-      objectReference: {fileID: 578309461}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
 --- !u!4 &1084726524 stripped
@@ -1428,10 +1387,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleportBlue4
       objectReference: {fileID: 0}
-    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: m_TagString
-      value: teleportblue4
-      objectReference: {fileID: 0}
     - target: {fileID: 4693382089953860329, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1488,10 +1443,6 @@ PrefabInstance:
       propertyPath: teleport3
       value: 
       objectReference: {fileID: 1042669812}
-    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: teleport4
-      value: 
-      objectReference: {fileID: 1172842306}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
 --- !u!4 &1819291229 stripped
@@ -1572,14 +1523,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleportBlue2
       objectReference: {fileID: 0}
-    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: m_TagString
-      value: teleportblue2
-      objectReference: {fileID: 0}
     - target: {fileID: 4693382089953860329, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1629,10 +1572,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 123676518}
     - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: teleport2
-      value: 
-      objectReference: {fileID: 814722763}
-    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: teleport3
       value: 
       objectReference: {fileID: 1042669812}
@@ -1656,10 +1595,6 @@ PrefabInstance:
     - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_Name
       value: TeleportBlue1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: m_TagString
-      value: teleportblue1
       objectReference: {fileID: 0}
     - target: {fileID: 4693382089953860329, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_RootOrder
@@ -1705,10 +1640,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
-      propertyPath: teleport1
-      value: 
-      objectReference: {fileID: 2135058372}
     - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: teleport2
       value: 
