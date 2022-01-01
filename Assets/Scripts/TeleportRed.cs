@@ -8,8 +8,5 @@ public class TeleportRed : TeleportBase
     {
         spriterendererteleport = GetComponent<SpriteRenderer>();
     }
-    protected override bool IsMainCharacterNear()
-    {
-        return base.IsMainCharacterNear();
-    }
+   
 }

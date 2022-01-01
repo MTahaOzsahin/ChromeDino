@@ -151,4 +151,5 @@ MonoBehaviour:
   teleport3: {fileID: 0}
   teleport4: {fileID: 0}
   maincharacter: {fileID: 3591678998522283357, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
-  teleportdetection: 0
+  maincharactersp: {fileID: 1695591200796164278, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+  characterscript: {fileID: 0}

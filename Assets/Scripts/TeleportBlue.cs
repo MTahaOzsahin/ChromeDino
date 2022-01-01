@@ -4,21 +4,41 @@ using UnityEngine;
 
 public class TeleportBlue : TeleportBase, ITeleportation
 {
-    
-    
+
+    public static int teleportdetection;
 
     private void Awake()
     {
-        spriterendererteleport = GetComponent<SpriteRenderer>();
+        spriterendererteleport = GetComponent<SpriteRenderer>();       
     }
+    
 
     public void Teleport()
     {
-        if (IsMainCharacterNear() && teleportdetection == 1)
+        if ( teleportdetection == 1)
         {
-            maincharacter.transform.position = new Vector3(teleport2.transform.position.x + 1, teleport2.transform.position.y,
+            Debug.Log("sorun burada");
+            maincharactertransform.transform.position = new Vector3(teleport2.transform.position.x + 1, teleport2.transform.position.y,
+                maincharacter.transform.position.z);
+
+           
+        }
+        /*
+        else if (teleportdetection == 2)
+        {
+            maincharacter.transform.position = new Vector3(teleport1.transform.position.x + 1, teleport1.transform.position.y,
                maincharacter.transform.position.z);
         }
+        else if (teleportdetection == 3)
+        {
+            maincharacter.transform.position = new Vector3(teleport4.transform.position.x + 1, teleport4.transform.position.y,
+               maincharacter.transform.position.z);
+        }
+        else if (teleportdetection == 4)
+        {
+            maincharacter.transform.position = new Vector3(teleport3.transform.position.x + 1, teleport3.transform.position.y,
+               maincharacter.transform.position.z);
+        */
     }
 
 
@@ -27,11 +47,12 @@ public class TeleportBlue : TeleportBase, ITeleportation
     {
         //return base.IsMainCharacterNear();
     }
+    */
 
     private void FixedUpdate()
     {
-       // Teleport();
-        Debug.Log(teleportdetection);
+       Teleport();
+       // Debug.Log(teleportdetection);
     }
 
 

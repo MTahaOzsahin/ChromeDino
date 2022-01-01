@@ -20,16 +20,24 @@ public class TeleportBase : MonoBehaviour
     public GameObject teleport4;
 
     public GameObject maincharacter;
+    public Transform maincharactertransform;
 
-    public int teleportdetection = 0;
+    
+
+   
+
+    
 
     
 
     private void Awake()
     {
         spriterendererteleport = GetComponent<SpriteRenderer>();
+       
+        maincharactertransform = GetComponent<Character>().maincharactertransform;
+        
     }
-
+    /*
     protected virtual bool IsMainCharacterNear()
     {
         Collider2D collider = Physics2D.OverlapCircle(spriterendererteleport.bounds.center, 0.25f, MainCharacterLayerMask);
@@ -42,4 +50,5 @@ public class TeleportBase : MonoBehaviour
             return false;
         }
     }  
+    */
 }

@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
     CharacterMovement characterMovement;
 
 
-    public int a = 0;
+    public  int teleportdetection = 0;
 
     private void Awake()
     {
@@ -61,14 +61,29 @@ public class Character : MonoBehaviour
         }
     }
 
-    public bool IsTeleportNear()
+    public  bool IsTeleportNear()
     {
-        //buradan devam edielcek
+        
 
-        Collider2D collider = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.25f, teleportLayerMask);
-        if (collider.CompareTag("teleportblue1") && collider != null)
+        Collider2D collider = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.25f);
+        if (collider.CompareTag("teleportblue1"))
         {
-            a = 1;
+            teleportdetection = 1;
+            return true;
+        }
+        else if (collider.CompareTag("teleportblue2"))
+        {
+            teleportdetection = 2;
+            return true;
+        }
+        else if (collider.CompareTag("teleportblue3"))
+        {
+            teleportdetection = 3;
+            return true;
+        }
+        else if (collider.CompareTag("teleportblue4"))
+        {
+            teleportdetection = 4;
             return true;
         }
         else
@@ -82,9 +97,6 @@ public class Character : MonoBehaviour
     private void FixedUpdate()
     {
         SetCharacterState();
-        if (IsTeleportNear())
-        {
-            Debug.Log("is near" + a);
-        }
+        Debug.Log(teleportdetection);
     }
 }
