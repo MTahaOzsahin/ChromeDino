@@ -16,8 +16,10 @@ public class Character : MonoBehaviour
 
     CharacterMovement characterMovement;
 
+    public static int teleportdetection = 0;
 
-    public  int teleportdetection = 0;
+
+    
 
     private void Awake()
     {
@@ -68,7 +70,7 @@ public class Character : MonoBehaviour
         Collider2D collider = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.25f);
         if (collider.CompareTag("teleportblue1"))
         {
-            teleportdetection = 1;
+            teleportdetection = 1;            
             return true;
         }
         else if (collider.CompareTag("teleportblue2"))
@@ -86,6 +88,18 @@ public class Character : MonoBehaviour
             teleportdetection = 4;
             return true;
         }
+        else if (collider.CompareTag("teleportred1"))
+        {
+            Debug.Log(teleportdetection);
+            teleportdetection = 5;
+            return true;
+        }
+        else if (collider.CompareTag("teleportred3"))
+        {
+            Debug.Log(teleportdetection);
+            teleportdetection = 7;
+            return true;
+        }
         else
         {
             return false;
@@ -97,6 +111,7 @@ public class Character : MonoBehaviour
     private void FixedUpdate()
     {
         SetCharacterState();
-        Debug.Log(teleportdetection);
+        IsTeleportNear();
+        
     }
 }

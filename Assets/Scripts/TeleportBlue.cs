@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TeleportBlue : TeleportBase, ITeleportation
 {
-
     public static int teleportdetection;
 
     private void Awake()
@@ -15,30 +14,29 @@ public class TeleportBlue : TeleportBase, ITeleportation
 
     public void Teleport()
     {
-        if ( teleportdetection == 1)
+        teleportdetection = Character.teleportdetection;
+        if (teleportdetection == 1 && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("sorun burada");
-            maincharactertransform.transform.position = new Vector3(teleport2.transform.position.x + 1, teleport2.transform.position.y,
+            maincharacter.transform.position = new Vector3(teleport2.transform.position.x + 2, teleport2.transform.position.y,
                 maincharacter.transform.position.z);
-
-           
         }
-        /*
-        else if (teleportdetection == 2)
+
+        else if (teleportdetection == 2 && Input.GetKeyDown(KeyCode.Space))
         {
-            maincharacter.transform.position = new Vector3(teleport1.transform.position.x + 1, teleport1.transform.position.y,
+            maincharacter.transform.position = new Vector3(teleport1.transform.position.x + 2, teleport1.transform.position.y,
                maincharacter.transform.position.z);
         }
-        else if (teleportdetection == 3)
+        else if (teleportdetection == 3 && Input.GetKeyDown(KeyCode.Space))
         {
             maincharacter.transform.position = new Vector3(teleport4.transform.position.x + 1, teleport4.transform.position.y,
                maincharacter.transform.position.z);
         }
-        else if (teleportdetection == 4)
+        else if (teleportdetection == 4 && Input.GetKeyDown(KeyCode.Space))
         {
             maincharacter.transform.position = new Vector3(teleport3.transform.position.x + 1, teleport3.transform.position.y,
                maincharacter.transform.position.z);
-        */
+        }
+        
     }
 
 
@@ -49,11 +47,13 @@ public class TeleportBlue : TeleportBase, ITeleportation
     }
     */
 
-    private void FixedUpdate()
+    private void Update()
     {
-       Teleport();
-       // Debug.Log(teleportdetection);
+        Teleport();
+        Debug.Log(teleportdetection);
     }
+
+    
 
 
 

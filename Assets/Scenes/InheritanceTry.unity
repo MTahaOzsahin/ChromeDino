@@ -231,6 +231,10 @@ PrefabInstance:
       propertyPath: teleport4
       value: 
       objectReference: {fileID: 1172842306}
+    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: maincharactertransform
+      value: 
+      objectReference: {fileID: 162575068}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
 --- !u!1 &123676518 stripped
@@ -242,6 +246,16 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3591678998522283357, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
   m_PrefabInstance: {fileID: 1365670163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &162575068 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+  m_PrefabInstance: {fileID: 1365670163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &219095935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5566943933465817261, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
+  m_PrefabInstance: {fileID: 1468668673}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &221095263
 PrefabInstance:
@@ -355,6 +369,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleportRed1
       objectReference: {fileID: 0}
+    - target: {fileID: 5566943933465817261, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
+      propertyPath: m_TagString
+      value: teleportred1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261580998376767879, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
+      propertyPath: teleport1
+      value: 
+      objectReference: {fileID: 987597707}
+    - target: {fileID: 7261580998376767879, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
+      propertyPath: teleport2
+      value: 
+      objectReference: {fileID: 219095935}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
 --- !u!1001 &274887506
@@ -543,7 +569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &376287013
 Transform:
   m_ObjectHideFlags: 0
@@ -755,6 +781,10 @@ PrefabInstance:
       propertyPath: maincharacter
       value: 
       objectReference: {fileID: 162575060}
+    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: maincharactertransform
+      value: 
+      objectReference: {fileID: 162575068}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
 --- !u!1 &814722763 stripped
@@ -834,6 +864,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b61fc23a0f9d954a8e9a1bc837dba87, type: 3}
+--- !u!1 &987597707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5566943933465817261, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
+  m_PrefabInstance: {fileID: 254177088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1042669812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
@@ -849,6 +884,10 @@ PrefabInstance:
     - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_Name
       value: TeleportBlue2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620535616981506178, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: m_TagString
+      value: teleportblue2
       objectReference: {fileID: 0}
     - target: {fileID: 4693382089953860329, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
       propertyPath: m_RootOrder
@@ -898,6 +937,10 @@ PrefabInstance:
       propertyPath: teleport1
       value: 
       objectReference: {fileID: 2135058372}
+    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: teleport2
+      value: 
+      objectReference: {fileID: 578309461}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
 --- !u!4 &1084726524 stripped
@@ -1065,7 +1108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1010213
+      value: 5.95
       objectReference: {fileID: 0}
     - target: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1256,8 +1299,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5566943933465817261, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
       propertyPath: m_Name
-      value: TeleportRed2
+      value: TeleportRed3
       objectReference: {fileID: 0}
+    - target: {fileID: 5566943933465817261, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
+      propertyPath: m_TagString
+      value: teleportred3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261580998376767879, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
+      propertyPath: teleport1
+      value: 
+      objectReference: {fileID: 987597707}
+    - target: {fileID: 7261580998376767879, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
+      propertyPath: teleport2
+      value: 
+      objectReference: {fileID: 219095935}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ba5b07fde2ced4182d1051d4c13b5f, type: 3}
 --- !u!1001 &1612678937
@@ -1459,6 +1514,10 @@ PrefabInstance:
       propertyPath: teleport4
       value: 
       objectReference: {fileID: 1172842306}
+    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: maincharactertransform
+      value: 
+      objectReference: {fileID: 162575068}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
 --- !u!4 &1819291229 stripped
@@ -1607,6 +1666,10 @@ PrefabInstance:
       propertyPath: maincharacter
       value: 
       objectReference: {fileID: 162575060}
+    - target: {fileID: 5055777341473871408, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
+      propertyPath: maincharactertransform
+      value: 
+      objectReference: {fileID: 162575068}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afaed31f393bdb4598be1e012aff104, type: 3}
 --- !u!1001 &2100051277

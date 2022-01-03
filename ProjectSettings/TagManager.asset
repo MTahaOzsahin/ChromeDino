@@ -13,6 +13,9 @@ TagManager:
   - teleportblue4
   - Item
   - ladders
+  - teleportred2
+  - teleportred1
+  - teleportred3
   layers:
   - Default
   - TransparentFX

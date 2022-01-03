@@ -143,13 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriterendererteleport: {fileID: 0}
-  MainCharacterLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   teleport1: {fileID: 3620535616981506178}
   teleport2: {fileID: 0}
   teleport3: {fileID: 0}
   teleport4: {fileID: 0}
-  maincharacter: {fileID: 3591678998522283357, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
-  maincharactersp: {fileID: 1695591200796164278, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
-  characterscript: {fileID: 0}
+  maincharacter: {fileID: 0}

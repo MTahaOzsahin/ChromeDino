@@ -12,7 +12,7 @@ public class TeleportBase : MonoBehaviour
 
     public  SpriteRenderer spriterendererteleport;
 
-    public LayerMask MainCharacterLayerMask;
+    
 
     public GameObject teleport1;
     public GameObject teleport2;
@@ -20,23 +20,23 @@ public class TeleportBase : MonoBehaviour
     public GameObject teleport4;
 
     public GameObject maincharacter;
-    public Transform maincharactertransform;
-
     
-
-   
-
     
 
     
+
+
+
+
+
+
+
 
     private void Awake()
     {
-        spriterendererteleport = GetComponent<SpriteRenderer>();
-       
-        maincharactertransform = GetComponent<Character>().maincharactertransform;
-        
+        spriterendererteleport = GetComponent<SpriteRenderer>();         
     }
+   
     /*
     protected virtual bool IsMainCharacterNear()
     {
