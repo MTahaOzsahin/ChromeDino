@@ -50,7 +50,7 @@ public class TeleportBlue : TeleportBase, ITeleportation
     private void Update()
     {
         Teleport();
-        Debug.Log(teleportdetection);
+        
     }
 
     

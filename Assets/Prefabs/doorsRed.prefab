@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8189333380061902677}
   - component: {fileID: 8762914845785383852}
   - component: {fileID: 5740033819083543626}
+  - component: {fileID: 5655741620744150234}
   m_Layer: 0
   m_Name: doorsRed
   m_TagString: Untagged
@@ -96,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.019891739, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,5 +108,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7066667, y: 1.7066667}
+  m_Size: {x: 1.9354258, y: 1.7066667}
   m_EdgeRadius: 0
+--- !u!114 &5655741620744150234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546916861233220965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e1b1b48e305154886b92186f3a6f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorcollider2d: {fileID: 0}
+  MainCharacter: {fileID: 0}
+  isGreenKeyHere: 0
+  isRedKeyHere: 0
+  isOrangeKeyHere: 0

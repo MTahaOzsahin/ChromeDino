@@ -54,7 +54,7 @@ public class Character : MonoBehaviour
             characterMovement.SetMovementState(CharacterMovement.MovementStates.WalkingUp);
         }       
     }
-
+    /*
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Item")
@@ -62,7 +62,7 @@ public class Character : MonoBehaviour
             inventory.AddItem(other.GetComponent<Item>());
         }
     }
-
+    */
     public  bool IsTeleportNear()
     {
         
@@ -90,13 +90,13 @@ public class Character : MonoBehaviour
         }
         else if (collider.CompareTag("teleportred1"))
         {
-            Debug.Log(teleportdetection);
+            
             teleportdetection = 5;
             return true;
         }
         else if (collider.CompareTag("teleportred3"))
         {
-            Debug.Log(teleportdetection);
+            
             teleportdetection = 7;
             return true;
         }

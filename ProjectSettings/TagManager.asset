@@ -16,6 +16,7 @@ TagManager:
   - teleportred2
   - teleportred1
   - teleportred3
+  - doorgreen
   layers:
   - Default
   - TransparentFX
