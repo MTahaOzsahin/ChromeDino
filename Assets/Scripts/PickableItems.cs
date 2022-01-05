@@ -12,6 +12,9 @@ public class PickableItems : MonoBehaviour
 
     public LayerMask MainCharacterLayerMask;
 
+
+    
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,7 +26,7 @@ public class PickableItems : MonoBehaviour
 
         Collider2D collider2D = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.5f, MainCharacterLayerMask);
 
-        if (collider2D == true)
+        if (collider2D)
         {           
             return true;           
         }
