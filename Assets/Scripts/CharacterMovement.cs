@@ -115,37 +115,7 @@ public class CharacterMovement : MonoBehaviour
 
     }
 
-   /*
-    //Teleporttain geri dönülecek
-    public void OnTriggerEnter2D(Collider2D collision) 
-    {
-        
-        if ( collision.CompareTag("teleportblue2") && IsTeleportNear() && Input.GetKey(KeyCode.Space))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport1.transform.position.x - 1, teleport1.transform.position.y,
-                maincharacterrb2d.transform.position.z);
-        }               
-        else if (collision.CompareTag("teleportblue1") && IsTeleportNear() && Input.GetKey(KeyCode.Space))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport2.transform.position.x + 1, teleport2.transform.position.y,
-                maincharacterrb2d.transform.position.z);
-        }       
-        else if (collision.CompareTag("teleportblue3"))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport4.transform.position.x + 1, teleport4.transform.position.y,
-                maincharacterrb2d.transform.position.z);
-        }
-        else if (collision.CompareTag("teleportblue4"))
-        {
-            maincharacterrb2d.transform.position = new Vector3(teleport3.transform.position.x - 1, teleport3.transform.position.y,
-                maincharacterrb2d.transform.position.z);
-        }
-        
-        
-    }
-   */
    
-
     public bool IsClimbAvaible()
     {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(maincharactersr.bounds.center, maincharactersr.bounds.size, 0f,

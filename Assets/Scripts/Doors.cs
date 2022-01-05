@@ -43,6 +43,7 @@ public class Doors : MonoBehaviour
         {
             isRedKeyHere = false;
         }
+
     }
     private void FixedUpdate()
     {

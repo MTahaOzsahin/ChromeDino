@@ -18,7 +18,8 @@ public class PickableItems : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        itemcollider2d = GetComponent<Collider2D>();       
+        itemcollider2d = GetComponent<Collider2D>();
+        
     }
 
     public virtual bool IsMainCharacterNear()

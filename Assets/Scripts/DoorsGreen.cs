@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class DoorsGreen : Doors
 {
-    
+    public static int greenDoorint = 0;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
         if (collision.gameObject && isGreenKeyHere)
         {
             Destroy(this.gameObject);
-            Destroy(MainCharacter.transform.GetChild(0));
+            greenDoorint = 1;
+            
             
         }
     }

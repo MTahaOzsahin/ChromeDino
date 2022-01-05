@@ -5,6 +5,7 @@ using UnityEngine;
 public class TeleportBlue : TeleportBase, ITeleportation
 {
     public static int teleportdetection;
+    
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class TeleportBlue : TeleportBase, ITeleportation
             maincharacter.transform.position = new Vector3(teleport3.transform.position.x + 1, teleport3.transform.position.y,
                maincharacter.transform.position.z);
         }
+       
         
     }
 

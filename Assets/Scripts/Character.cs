@@ -10,13 +10,19 @@ public class Character : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Inventory inventory;
     public Transform maincharactertransform;
+   
 
     public LayerMask teleportLayerMask;
+    
 
 
     CharacterMovement characterMovement;
 
     public static int teleportdetection = 0;
+
+
+
+    public int greendoor;
 
 
     
@@ -28,6 +34,7 @@ public class Character : MonoBehaviour
         Charachterrb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         maincharactertransform = GetComponent<Transform>();
+        
     }
 
    public void SetCharacterState()
@@ -54,15 +61,7 @@ public class Character : MonoBehaviour
             characterMovement.SetMovementState(CharacterMovement.MovementStates.WalkingUp);
         }       
     }
-    /*
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Item")
-        {
-            inventory.AddItem(other.GetComponent<Item>());
-        }
-    }
-    */
+   
     public  bool IsTeleportNear()
     {
         
@@ -70,21 +69,25 @@ public class Character : MonoBehaviour
         Collider2D collider = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.25f);
         if (collider.CompareTag("teleportblue1"))
         {
+           
             teleportdetection = 1;            
             return true;
         }
         else if (collider.CompareTag("teleportblue2"))
         {
+           
             teleportdetection = 2;
             return true;
         }
         else if (collider.CompareTag("teleportblue3"))
         {
+           
             teleportdetection = 3;
             return true;
         }
         else if (collider.CompareTag("teleportblue4"))
         {
+            
             teleportdetection = 4;
             return true;
         }
@@ -105,6 +108,15 @@ public class Character : MonoBehaviour
             return false;
         }
     }
+    void KeyDestroyer()
+    {
+        greendoor = DoorsGreen.greenDoorint;
+        Debug.Log(greendoor);
+        if (greendoor == 1)
+        {
+            Destroy(transform.Find("keyGreen(Clone)"));
+        }
+    }
 
 
    
@@ -112,6 +124,6 @@ public class Character : MonoBehaviour
     {
         SetCharacterState();
         IsTeleportNear();
-        
+        KeyDestroyer();
     }
 }

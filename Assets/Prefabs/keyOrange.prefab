@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5444644218455842680}
   - component: {fileID: -2730110027314526387}
   - component: {fileID: 8569747979024611654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: keyOrange
-  m_TagString: Item
+  m_TagString: orangeKey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,10 +139,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6394b68bea2796f48a4fb6bed3d70f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 3619769994579349561}
   itemcollider2d: {fileID: 0}
   maincharacter: {fileID: 0}
   MainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096
   keyprefab: {fileID: 7573183971524316148}
+  clonedkeyprefab: {fileID: 0}
