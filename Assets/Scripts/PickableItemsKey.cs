@@ -7,19 +7,17 @@ public class PickableItemsKey : PickableItems
     public GameObject keyprefab;
     public GameObject clonedkeyprefab;
 
-    public int c;
+    public bool isgreendoorunlocked;
+    public bool isredfoorunlocked;
+    public bool isorangedoorunlocked;
 
+    
 
-
-    private void Awake()
-    {
-        
-    }
+    
 
     public void DestroyAndFollow()
     {
-        c = DoorsGreen.greenDoorint;
-
+        
         if (IsMainCharacterNear() && CompareTag("redKey"))
         {
             clonedkeyprefab = GameObject.Instantiate(keyprefab, new Vector3(maincharacter.transform.position.x - 1,
@@ -28,6 +26,7 @@ public class PickableItemsKey : PickableItems
             
 
             Destroy(this.gameObject);
+            
           
         }
         else if (IsMainCharacterNear() && CompareTag("greenKey"))
@@ -48,14 +47,34 @@ public class PickableItemsKey : PickableItems
 
             Destroy(this.gameObject);
         }
-        
+       
     }
-    
+ 
+    void ClonedKeyDestoyer()
+    {
+        isgreendoorunlocked = DoorsGreen.isdoorunlocked;
+        if (isgreendoorunlocked)
+        {
+            Destroy(GameObject.Find("keyGreen(Clone)"));
+            Debug.Log("aaaaa");
+        }
+        isorangedoorunlocked = DoorsOrange.isdoorunlocked;
+        if (isorangedoorunlocked)
+        {
+            Destroy(GameObject.Find("keyOrange(Clone)"));
+        }
+        isredfoorunlocked = DoorsRed.isdoorunlocked;
+        if (isredfoorunlocked)
+        {
+            Destroy(GameObject.Find("keyRed(Clone)"));
+        }
+    }
     
 
     private void FixedUpdate()
     {
-        DestroyAndFollow();     
+        DestroyAndFollow();
+        ClonedKeyDestoyer();
     }
 
 
@@ -67,7 +86,28 @@ public class PickableItemsKey : PickableItems
      * clonedkeyprefab.transform.position = new Vector3(maincharacter.transform.position.x - 1,
                 maincharacter.transform.position.y,
               maincharacter.transform.position.z);
-     * 
+     * class Keys
+    {
+        private int id;
+        private string keyname;
+
+        public int Id { get => id; set => id = value; }
+        public string Keyname { get => keyname; set => keyname = value; }
+
+        public  Keys(int id, string name)
+        {
+            this.id = id;
+            this.Keyname = name;
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        List<Keys> keywehave = new List<Keys>();
+        keywehave.Add(new Keys(0, "greenKey"));
+        keywehave.Add(new Keys(1, "redKey"));
+        keywehave.Add(new Keys(2, "orangeKey"));
+    }
      * 
      * 
      * 

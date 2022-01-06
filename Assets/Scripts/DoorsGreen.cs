@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class DoorsGreen : Doors
 {
-    public static int greenDoorint = 0;
+    public static bool isdoorunlocked;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        isdoorunlocked = false;
         if (collision.gameObject && isGreenKeyHere)
         {
             Destroy(this.gameObject);
-            greenDoorint = 1;
-            
-            
+            isdoorunlocked = true;
         }
     }
    

@@ -108,22 +108,13 @@ public class Character : MonoBehaviour
             return false;
         }
     }
-    void KeyDestroyer()
-    {
-        greendoor = DoorsGreen.greenDoorint;
-        Debug.Log(greendoor);
-        if (greendoor == 1)
-        {
-            Destroy(transform.Find("keyGreen(Clone)"));
-        }
-    }
-
+    
 
    
     private void FixedUpdate()
     {
         SetCharacterState();
         IsTeleportNear();
-        KeyDestroyer();
+       
     }
 }
