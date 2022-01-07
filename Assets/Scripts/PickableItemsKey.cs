@@ -55,8 +55,7 @@ public class PickableItemsKey : PickableItems
         isgreendoorunlocked = DoorsGreen.isdoorunlocked;
         if (isgreendoorunlocked)
         {
-            Destroy(GameObject.Find("keyGreen(Clone)"));
-            Debug.Log("aaaaa");
+            Destroy(GameObject.Find("keyGreen(Clone)"));           
         }
         isorangedoorunlocked = DoorsOrange.isdoorunlocked;
         if (isorangedoorunlocked)
