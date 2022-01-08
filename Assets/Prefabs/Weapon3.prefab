@@ -133,6 +133,7 @@ MonoBehaviour:
   Weapon: {fileID: 8538644647347389738}
   CloneWeapon: {fileID: 0}
   particleSystemeffect: {fileID: 6899916906974641816}
+  WeaponShot: {fileID: 4370262174071649772, guid: ee08ee8bf4e65264c9778ffe436d899a, type: 3}
 --- !u!198 &6899916906974641816
 ParticleSystem:
   m_ObjectHideFlags: 0

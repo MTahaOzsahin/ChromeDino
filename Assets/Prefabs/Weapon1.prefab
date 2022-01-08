@@ -133,6 +133,7 @@ MonoBehaviour:
   Weapon: {fileID: 8603777880319411282}
   CloneWeapon: {fileID: 0}
   particleSystemeffect: {fileID: 554282324788930209}
+  WeaponShot: {fileID: 910426809063458375, guid: 1129c002bfd5d0144877914d1f16c603, type: 3}
 --- !u!198 &554282324788930209
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -216,7 +217,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.52
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -269,7 +270,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 0.44
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -701,7 +702,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 10
+    maxNumParticles: 2
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -760,7 +761,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 12
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -847,7 +848,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.26
+      value: 0.03
       mode: 2
       spread: 0.97
       speed:
@@ -905,7 +906,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 0
+      mode: 3
       spread: 0
       speed:
         serializedVersion: 2

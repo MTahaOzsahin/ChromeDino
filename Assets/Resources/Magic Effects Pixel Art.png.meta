@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: b52f37b477118884690080d67809d45b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7714963952332434410
+    second: Magic Effects Pixel Art_0
+  - first:
+      213: -7485120274254234800
+    second: Magic Effects Pixel Art_1
+  - first:
+      213: 6444922603139916280
+    second: Magic Effects Pixel Art_2
+  - first:
+      213: -8432172780168348622
+    second: Magic Effects Pixel Art_3
+  - first:
+      213: 9209262680464251634
+    second: Magic Effects Pixel Art_4
+  - first:
+      213: -2571168346664399398
+    second: Magic Effects Pixel Art_5
+  - first:
+      213: -8891057977735579226
+    second: Magic Effects Pixel Art_6
+  - first:
+      213: -1328960095871721502
+    second: Magic Effects Pixel Art_7
+  - first:
+      213: -6711621442134704578
+    second: Magic Effects Pixel Art_8
+  - first:
+      213: 7331494338732576097
+    second: Magic Effects Pixel Art_9
+  - first:
+      213: -5803129669539452414
+    second: Magic Effects Pixel Art_10
+  - first:
+      213: 2464938565614398747
+    second: Magic Effects Pixel Art_11
+  - first:
+      213: 6608666327544622017
+    second: Magic Effects Pixel Art_12
+  - first:
+      213: -7290720387083739684
+    second: Magic Effects Pixel Art_13
+  - first:
+      213: 755346738939237260
+    second: Magic Effects Pixel Art_14
+  - first:
+      213: 4821576008529382604
+    second: Magic Effects Pixel Art_15
+  - first:
+      213: 1451093827588007329
+    second: Magic Effects Pixel Art_16
+  - first:
+      213: 5158512383504633650
+    second: Magic Effects Pixel Art_17
+  - first:
+      213: 7254510410515730830
+    second: Magic Effects Pixel Art_18
+  - first:
+      213: -4242999475574283410
+    second: Magic Effects Pixel Art_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_0
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 778
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebe7b9c6de011b60800000000000000
+      internalID: 7714963952332434410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_1
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 748
+        width: 206
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b7008b4c28f1890800000000000000
+      internalID: -7485120274254234800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_2
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 745
+        width: 212
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f16a0df5f6f07950800000000000000
+      internalID: 6444922603139916280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_3
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 763
+        width: 44
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cf8513887eafa80800000000000000
+      internalID: -8432172780168348622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_4
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 763
+        width: 69
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa55587d9fddcf70800000000000000
+      internalID: 9209262680464251634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_5
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 748
+        width: 47
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add0757e200615cd0800000000000000
+      internalID: -2571168346664399398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_6
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 255
+        width: 72
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9faa740ed9c9480800000000000000
+      internalID: -8891057977735579226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 177
+        width: 222
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef95ec75d59e8de0800000000000000
+      internalID: -1328960095871721502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_8
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 258
+        width: 51
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e7aaaabd78bd2a0800000000000000
+      internalID: -6711621442134704578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_9
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 179
+        width: 208
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d41f4d143beb560800000000000000
+      internalID: 7331494338732576097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_10
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 239
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a2295df44277fa0800000000000000
+      internalID: -5803129669539452414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_11
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 232
+        width: 31
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d6b9cc098353220800000000000000
+      internalID: 2464938565614398747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_12
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 238
+        width: 41
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbe16cb203b6bb50800000000000000
+      internalID: 6608666327544622017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_13
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 232
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdddc239f6822da90800000000000000
+      internalID: -7290720387083739684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 238
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8319b86bd78b7a00800000000000000
+      internalID: 755346738939237260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_15
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 202
+        width: 103
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc80fd75dda9e240800000000000000
+      internalID: 4821576008529382604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_16
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 205
+        width: 59
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a52521e522532410800000000000000
+      internalID: 1451093827588007329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_17
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 194
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f4f3c8ea7b69740800000000000000
+      internalID: 5158512383504633650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_18
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 177
+        width: 62
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81d92648c23da460800000000000000
+      internalID: 7254510410515730830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic Effects Pixel Art_19
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 179
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63e9341576dd15c0800000000000000
+      internalID: -4242999475574283410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

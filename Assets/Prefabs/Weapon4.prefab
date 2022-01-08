@@ -131,8 +131,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   Weapon: {fileID: 244913096254426425}
-  CloneWeapon: {fileID: 0}
   particleSystemeffect: {fileID: 7179611768407223161}
+  WeaponShot: {fileID: 7455712501832110885, guid: 21dbdc982eed53544bab2c9c9c822bb4, type: 3}
 --- !u!198 &7179611768407223161
 ParticleSystem:
   m_ObjectHideFlags: 0
