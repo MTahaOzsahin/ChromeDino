@@ -23,7 +23,7 @@ public class PickableItemsKey : PickableItems
             clonedkeyprefab = GameObject.Instantiate(keyprefab, new Vector3(maincharacter.transform.position.x - 1,
                 maincharacter.transform.position.y - 0.5f, maincharacter.transform.position.z), Quaternion.identity,maincharacter.transform);
 
-            
+            clonedkeyprefab.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
 
             Destroy(this.gameObject);
             
@@ -34,7 +34,7 @@ public class PickableItemsKey : PickableItems
             clonedkeyprefab = GameObject.Instantiate(keyprefab, new Vector3(maincharacter.transform.position.x - 1,
                 maincharacter.transform.position.y, maincharacter.transform.position.z), Quaternion.identity,maincharacter.transform);
 
-            
+            clonedkeyprefab.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
 
             Destroy(this.gameObject);
         }
@@ -43,7 +43,7 @@ public class PickableItemsKey : PickableItems
             clonedkeyprefab = GameObject.Instantiate(keyprefab, new Vector3(maincharacter.transform.position.x - 1,
                 maincharacter.transform.position.y + 0.5f, maincharacter.transform.position.z), Quaternion.identity,maincharacter.transform);
 
-            
+            clonedkeyprefab.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
 
             Destroy(this.gameObject);
         }

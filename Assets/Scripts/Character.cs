@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character : MonoBehaviour, IChildCheckList
 {
     [Header("Components")]
     public Animator animator;
     public Rigidbody2D Charachterrb2D;
     public SpriteRenderer spriteRenderer;
-    public Inventory inventory;
     public Transform maincharactertransform;
-   
+
+    private Transform[] ChildList;
+
+    public GameObject[] Weapons;
+
 
     public LayerMask teleportLayerMask;
-    
+
 
 
     CharacterMovement characterMovement;
@@ -21,11 +24,10 @@ public class Character : MonoBehaviour
     public static int teleportdetection = 0;
 
 
+   
 
-    public int greendoor;
+    private GameObject CloneWeapon;
 
-
-    
 
     private void Awake()
     {
@@ -33,11 +35,9 @@ public class Character : MonoBehaviour
         animator = GetComponent<Animator>();
         Charachterrb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        maincharactertransform = GetComponent<Transform>();
-        
+        maincharactertransform = GetComponent<Transform>();       
     }
-
-   public void SetCharacterState()
+    public void SetCharacterState()
     {
         if (Charachterrb2D.velocity.x <=  1f && Charachterrb2D.velocity.x >= -1f &&
             Charachterrb2D.velocity.y <= 1f && Charachterrb2D.velocity.y >= -1f)
@@ -108,13 +108,69 @@ public class Character : MonoBehaviour
             return false;
         }
     }
-    
 
+    public void ChildCheckList()
+    {
+        ChildList = new Transform[transform.childCount];
+        int i = 0;
+        foreach (Transform child in transform)
+        {
+            ChildList[i] = child;
+            i++;
+        }
+        Debug.Log("MainCharacter have " + i + " items");
+        if (ChildList.Length > 0)
+        {
+            for (int a = 0; a < ChildList.Length; a++)
+            {
+                Debug.Log(ChildList[a].name);
+            }
+        }
+
+
+    }
+    public void SetCharacterWeapon()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1))
+        {        
+            CloneWeapon = GameObject.Instantiate(Weapons[0], new Vector3(transform.position.x + 0.5f,
+                transform.position.y + 0.25f, transform.position.z),
+                Quaternion.Euler(0, 0, 45), transform);
+            CloneWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2))
+        {          
+            CloneWeapon = GameObject.Instantiate(Weapons[1], new Vector3(transform.position.x + 0.5f,
+                transform.position.y + 0.25f, transform.position.z),
+                Quaternion.Euler(0, 0, 45), transform);
+            CloneWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha3))
+        {           
+            CloneWeapon = GameObject.Instantiate(Weapons[2], new Vector3(transform.position.x + 0.5f,
+                 transform.position.y + 0.25f, transform.position.z),
+                 Quaternion.Euler(0, 0, 45), transform);
+            CloneWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha4))
+        {          
+            CloneWeapon = GameObject.Instantiate(Weapons[3], new Vector3(transform.position.x + 0.5f,
+                 transform.position.y + 0.25f, transform.position.z),
+                 Quaternion.Euler(0, 0, 45), transform);
+            CloneWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
+        }
+        
+    }
    
+
     private void FixedUpdate()
     {
         SetCharacterState();
         IsTeleportNear();
-       
+        ChildCheckList();   
+    }
+    private void Update()
+    {
+        SetCharacterWeapon();
     }
 }

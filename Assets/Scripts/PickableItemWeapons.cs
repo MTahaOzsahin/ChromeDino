@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickableItemWeapons : PickableItems, IParticleSystem, IMagicShot
+public class PickableItemWeapons : PickableItems, IParticleSystem, IMagicShot 
 {
     [SerializeField] GameObject Weapon;   
     [SerializeField] ParticleSystem particleSystemeffect;
@@ -10,6 +10,8 @@ public class PickableItemWeapons : PickableItems, IParticleSystem, IMagicShot
     private GameObject WeaponShotClone;
     private GameObject CloneWeapon;
 
+    [SerializeField] GameObject[] WeaponsList; //will try to get a list that gameobjects use this script
+    
 
     private void Awake()
     {
@@ -39,6 +41,9 @@ public class PickableItemWeapons : PickableItems, IParticleSystem, IMagicShot
         }
 
     }
+    
+
+
 
 
     public void ParticleSystemConfig()
@@ -72,13 +77,14 @@ public class PickableItemWeapons : PickableItems, IParticleSystem, IMagicShot
         }
         Destroy(WeaponShotClone, 1f);
     }
+    
     private void FixedUpdate()
     {
         
     }
     private void Update()
     {
-        ParticleSystemConfig();
+       // ParticleSystemConfig();
         MagicShot();
     }
 }

@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickableItems : MonoBehaviour
+public class PickableItems : MonoBehaviour 
 {
     public SpriteRenderer spriteRenderer;
     public Collider2D itemcollider2d;
 
     public GameObject maincharacter;
+
+    public Transform[] ChildList;
    
 
     public LayerMask MainCharacterLayerMask;
@@ -34,5 +36,4 @@ public class PickableItems : MonoBehaviour
         return false;
     }
     
-
 }

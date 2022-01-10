@@ -126,13 +126,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7472856503104306438}
   itemcollider2d: {fileID: -8930644143030917484}
-  maincharacter: {fileID: 0}
+  maincharacter: {fileID: 3591678998522283357, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+  ChildList: []
   MainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096
   Weapon: {fileID: 752818752813650623}
   particleSystemeffect: {fileID: 5788684133543611054}
   WeaponShot: {fileID: 9108630962168905625, guid: f924346e695fc504caa3bfb47505631e, type: 3}
+  WeaponsList: []
 --- !u!198 &5788684133543611054
 ParticleSystem:
   m_ObjectHideFlags: 0
