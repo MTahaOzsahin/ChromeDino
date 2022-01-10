@@ -12,7 +12,7 @@ public class Character : MonoBehaviour, IChildCheckList
 
     private Transform[] ChildList;
 
-    public GameObject[] Weapons;
+  
 
 
     public LayerMask teleportLayerMask;
@@ -129,38 +129,7 @@ public class Character : MonoBehaviour, IChildCheckList
 
 
     }
-    public void SetCharacterWeapon()
-    {
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1))
-        {        
-            CloneWeapon = GameObject.Instantiate(Weapons[0], new Vector3(transform.position.x + 0.5f,
-                transform.position.y + 0.25f, transform.position.z),
-                Quaternion.Euler(0, 0, 45), transform);
-            CloneWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
-        }
-        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2))
-        {          
-            CloneWeapon = GameObject.Instantiate(Weapons[1], new Vector3(transform.position.x + 0.5f,
-                transform.position.y + 0.25f, transform.position.z),
-                Quaternion.Euler(0, 0, 45), transform);
-            CloneWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
-        }
-        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha3))
-        {           
-            CloneWeapon = GameObject.Instantiate(Weapons[2], new Vector3(transform.position.x + 0.5f,
-                 transform.position.y + 0.25f, transform.position.z),
-                 Quaternion.Euler(0, 0, 45), transform);
-            CloneWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
-        }
-        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha4))
-        {          
-            CloneWeapon = GameObject.Instantiate(Weapons[3], new Vector3(transform.position.x + 0.5f,
-                 transform.position.y + 0.25f, transform.position.z),
-                 Quaternion.Euler(0, 0, 45), transform);
-            CloneWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
-        }
-        
-    }
+    
    
 
     private void FixedUpdate()
@@ -171,6 +140,6 @@ public class Character : MonoBehaviour, IChildCheckList
     }
     private void Update()
     {
-        SetCharacterWeapon();
+       
     }
 }
