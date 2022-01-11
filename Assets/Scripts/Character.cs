@@ -24,9 +24,11 @@ public class Character : MonoBehaviour, IChildCheckList
     public static int teleportdetection = 0;
 
 
+    PickableItemWeapons PickableItemWeapons;
+
    
 
-    private GameObject CloneWeapon;
+    
 
 
     private void Awake()
@@ -35,7 +37,8 @@ public class Character : MonoBehaviour, IChildCheckList
         animator = GetComponent<Animator>();
         Charachterrb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        maincharactertransform = GetComponent<Transform>();       
+        maincharactertransform = GetComponent<Transform>();
+        PickableItemWeapons = GetComponent<PickableItemWeapons>();
     }
     public void SetCharacterState()
     {
@@ -61,7 +64,28 @@ public class Character : MonoBehaviour, IChildCheckList
             characterMovement.SetMovementState(CharacterMovement.MovementStates.WalkingUp);
         }       
     }
-   
+    public void SetCharacterSelectedWeapon()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("aaaa");
+            PickableItemWeapons.SetCharacterWeaponUse(PickableItemWeapons.SelectedWeapons.Weapon1);
+           
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            PickableItemWeapons.SetCharacterWeaponUse(PickableItemWeapons.SelectedWeapons.Weapon2);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            PickableItemWeapons.SetCharacterWeaponUse(PickableItemWeapons.SelectedWeapons.Weapon3);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            PickableItemWeapons.SetCharacterWeaponUse(PickableItemWeapons.SelectedWeapons.Weapon4);
+        }
+    }
+
     public  bool IsTeleportNear()
     {
         
@@ -136,10 +160,11 @@ public class Character : MonoBehaviour, IChildCheckList
     {
         SetCharacterState();
         IsTeleportNear();
-        ChildCheckList();   
+        ChildCheckList();
+       
     }
     private void Update()
     {
-       
+        SetCharacterSelectedWeapon();
     }
 }
