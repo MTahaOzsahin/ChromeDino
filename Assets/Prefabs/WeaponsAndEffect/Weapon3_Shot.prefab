@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -194106096497660551}
   - component: {fileID: 228458430952366460}
   - component: {fileID: 7165184570312169363}
+  - component: {fileID: -1026595428772264456}
   m_Layer: 0
   m_Name: Weapon3_Shot
   m_TagString: Untagged
@@ -151,3 +152,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1026595428772264456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4370262174071649772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548747d457c18144c952b65911c4f77f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1695591200796164278, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+  itemcollider2d: {fileID: 0}
+  maincharacter: {fileID: 0}
+  ChildList: []
+  MainCharacterLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  Weapon: {fileID: 0}
+  particleSystemeffect: {fileID: 0}
+  WeaponShot: {fileID: 0}
+  WeaponShotClone: {fileID: 0}
+  DamageableLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  WeaponShotCloneSp: {fileID: 0}
+  WeaponShotCloneObject: {fileID: 4370262174071649772}

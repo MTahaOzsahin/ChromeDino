@@ -24,7 +24,7 @@ public class Character : MonoBehaviour, IChildCheckList
     public static int teleportdetection = 0;
 
 
-    PickableItemWeapons PickableItemWeapons;
+   
 
    
 
@@ -38,7 +38,7 @@ public class Character : MonoBehaviour, IChildCheckList
         Charachterrb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         maincharactertransform = GetComponent<Transform>();
-        PickableItemWeapons = GetComponent<PickableItemWeapons>();
+       
     }
     public void SetCharacterState()
     {
@@ -64,27 +64,7 @@ public class Character : MonoBehaviour, IChildCheckList
             characterMovement.SetMovementState(CharacterMovement.MovementStates.WalkingUp);
         }       
     }
-    public void SetCharacterSelectedWeapon()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Debug.Log("aaaa");
-            PickableItemWeapons.SetCharacterWeaponUse(PickableItemWeapons.SelectedWeapons.Weapon1);
-           
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            PickableItemWeapons.SetCharacterWeaponUse(PickableItemWeapons.SelectedWeapons.Weapon2);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            PickableItemWeapons.SetCharacterWeaponUse(PickableItemWeapons.SelectedWeapons.Weapon3);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            PickableItemWeapons.SetCharacterWeaponUse(PickableItemWeapons.SelectedWeapons.Weapon4);
-        }
-    }
+    
 
     public  bool IsTeleportNear()
     {
@@ -142,12 +122,12 @@ public class Character : MonoBehaviour, IChildCheckList
             ChildList[i] = child;
             i++;
         }
-        Debug.Log("MainCharacter have " + i + " items");
+      //  Debug.Log("MainCharacter have " + i + " items");
         if (ChildList.Length > 0)
         {
             for (int a = 0; a < ChildList.Length; a++)
             {
-                Debug.Log(ChildList[a].name);
+                //Debug.Log(ChildList[a].name);
             }
         }
 
@@ -165,6 +145,6 @@ public class Character : MonoBehaviour, IChildCheckList
     }
     private void Update()
     {
-        SetCharacterSelectedWeapon();
+       
     }
 }
