@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour, IOnDeath
 {
     public int ObjectHealth;
-    public bool IsShotHappend;
+    
    
 
     
@@ -34,6 +34,6 @@ public class Health : MonoBehaviour, IOnDeath
     }
     private void FixedUpdate()
     {
-        
+        OnDeath();
     }
 }

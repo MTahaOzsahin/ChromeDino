@@ -24,11 +24,10 @@ public class Character : MonoBehaviour, IChildCheckList
     public static int teleportdetection = 0;
 
 
-   
-
-   
 
     
+   
+
 
 
     private void Awake()
@@ -38,6 +37,7 @@ public class Character : MonoBehaviour, IChildCheckList
         Charachterrb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         maincharactertransform = GetComponent<Transform>();
+       
        
     }
     public void SetCharacterState()
@@ -133,14 +133,16 @@ public class Character : MonoBehaviour, IChildCheckList
 
 
     }
+
     
-   
 
     private void FixedUpdate()
     {
         SetCharacterState();
         IsTeleportNear();
         ChildCheckList();
+        
+       
        
     }
     private void Update()
