@@ -180,3 +180,4 @@ MonoBehaviour:
     m_Bits: 512
   WeaponShotCloneSp: {fileID: 0}
   WeaponShotCloneObject: {fileID: 9108630962168905625}
+  MagicShotTakenDamage: 10
