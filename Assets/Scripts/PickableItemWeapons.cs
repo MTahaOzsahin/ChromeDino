@@ -60,21 +60,31 @@ public class PickableItemWeapons : PickableItems, IParticleSystem /*IMagicShot *
     //}
     private void PickupWeapon()
     {
-        if (IsMainCharacterNear() && maincharacter.transform.rotation.y >= 0)
-        {      
-                PickedWeapon = GameObject.Instantiate(Weapon, new Vector3(maincharacter.transform.position.x + 0.5f,
+        if (IsMainCharacterNear() && Input.GetKeyDown(KeyCode.E) && maincharacter.transform.rotation.y >= 0 )
+        {
+            if (maincharacter.transform.childCount != 0)
+            {
+                maincharacter.transform.DetachChildren();
+                Destroy(PickedWeapon);
+            }
+            PickedWeapon = GameObject.Instantiate(Weapon, new Vector3(maincharacter.transform.position.x + 0.5f,
                 maincharacter.transform.position.y + 0.25f, maincharacter.transform.position.z),
                 Quaternion.Euler(0, 0, 45), maincharacter.transform);
                 PickedWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
-                Destroy(this.gameObject);     
+            Destroy(gameObject);
         }
-        else if (IsMainCharacterNear() && maincharacter.transform.rotation.y <= 0)
+        else if (IsMainCharacterNear()  && Input.GetKeyDown(KeyCode.E) && maincharacter.transform.rotation.y <= 0)
         {
+            if (maincharacter.transform.childCount != 0)
+            {
+                maincharacter.transform.DetachChildren();
+                Destroy(PickedWeapon);
+            }
             PickedWeapon = GameObject.Instantiate(Weapon, new Vector3(maincharacter.transform.position.x - 0.5f,
                 maincharacter.transform.position.y + 0.25f, maincharacter.transform.position.z),
                 Quaternion.Euler(0, -180, 45), maincharacter.transform);
             PickedWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
