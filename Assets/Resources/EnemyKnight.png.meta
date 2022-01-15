@@ -1,0 +1,1260 @@
+fileFormatVersion: 2
+guid: 029f8a8e01e54af43b63092242b6e9db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2086565087312756537
+    second: EnemyKnight_0
+  - first:
+      213: 4720168718985427653
+    second: EnemyKnight_1
+  - first:
+      213: 5504703950740744796
+    second: EnemyKnight_2
+  - first:
+      213: -7166043434674760444
+    second: EnemyKnight_3
+  - first:
+      213: 7533686631004541460
+    second: EnemyKnight_4
+  - first:
+      213: -5219512987037812465
+    second: EnemyKnight_5
+  - first:
+      213: -7181256199737694862
+    second: EnemyKnight_6
+  - first:
+      213: -4295713341917038746
+    second: EnemyKnight_7
+  - first:
+      213: 2248827293007521770
+    second: EnemyKnight_8
+  - first:
+      213: -6403851348554323071
+    second: EnemyKnight_9
+  - first:
+      213: -5872902748047011985
+    second: EnemyKnight_10
+  - first:
+      213: -3834260526619345461
+    second: EnemyKnight_11
+  - first:
+      213: 3291464007308888488
+    second: EnemyKnight_12
+  - first:
+      213: 4219979398168307869
+    second: EnemyKnight_13
+  - first:
+      213: -3955938694455899320
+    second: EnemyKnight_14
+  - first:
+      213: 1549872088660671971
+    second: EnemyKnight_15
+  - first:
+      213: -8486049409156425647
+    second: EnemyKnight_16
+  - first:
+      213: 6916457376844486652
+    second: EnemyKnight_17
+  - first:
+      213: 5248167327406959062
+    second: EnemyKnight_18
+  - first:
+      213: -4395764665213631763
+    second: EnemyKnight_19
+  - first:
+      213: -7682519786645322753
+    second: EnemyKnight_20
+  - first:
+      213: -7754985831806299710
+    second: EnemyKnight_21
+  - first:
+      213: -7468605711292334073
+    second: EnemyKnight_22
+  - first:
+      213: -3565575153302571323
+    second: EnemyKnight_23
+  - first:
+      213: 997842051263519811
+    second: EnemyKnight_24
+  - first:
+      213: -1455922090623957753
+    second: EnemyKnight_25
+  - first:
+      213: 5672867554956353165
+    second: EnemyKnight_26
+  - first:
+      213: 314943405485411097
+    second: EnemyKnight_27
+  - first:
+      213: -2448521863160804591
+    second: EnemyKnight_28
+  - first:
+      213: 8432504466493355294
+    second: EnemyKnight_29
+  - first:
+      213: -1202614651736087199
+    second: EnemyKnight_30
+  - first:
+      213: 5786175366194649019
+    second: EnemyKnight_31
+  - first:
+      213: 4686661261412818519
+    second: EnemyKnight_32
+  - first:
+      213: -8404650156049882933
+    second: EnemyKnight_33
+  - first:
+      213: 908805994064479877
+    second: EnemyKnight_34
+  - first:
+      213: 4794066690935248447
+    second: EnemyKnight_35
+  - first:
+      213: -9196222532239096836
+    second: EnemyKnight_36
+  - first:
+      213: -5789178793119405924
+    second: EnemyKnight_37
+  - first:
+      213: -1378851902560292094
+    second: EnemyKnight_38
+  - first:
+      213: -1093654744847514919
+    second: EnemyKnight_39
+  - first:
+      213: -2972990960054617549
+    second: EnemyKnight_40
+  - first:
+      213: 1509861363291885523
+    second: EnemyKnight_41
+  - first:
+      213: 6423830276747262983
+    second: EnemyKnight_42
+  - first:
+      213: -899194686315251364
+    second: EnemyKnight_43
+  - first:
+      213: 6550526628468840038
+    second: EnemyKnight_44
+  - first:
+      213: 2037891697368834050
+    second: EnemyKnight_45
+  - first:
+      213: 4287331139004118402
+    second: EnemyKnight_46
+  - first:
+      213: -3202359743000692791
+    second: EnemyKnight_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 75
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemyKnight_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 324
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f320e44e7f4fc10800000000000000
+      internalID: 2086565087312756537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 324
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca790ff078618140800000000000000
+      internalID: 4720168718985427653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_2
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 324
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a6799f313a46c40800000000000000
+      internalID: 5504703950740744796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 324
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405d037a6791d8c90800000000000000
+      internalID: -7166043434674760444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_4
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 324
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412922263180d8860800000000000000
+      internalID: 7533686631004541460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_5
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 324
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09b21ba7909097b0800000000000000
+      internalID: -5219512987037812465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_6
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 324
+        width: 51
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2752095c88d075c90800000000000000
+      internalID: -7181256199737694862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_7
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 324
+        width: 57
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667f026a97f8264c0800000000000000
+      internalID: -4295713341917038746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_8
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 324
+        width: 51
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7aae81280753f10800000000000000
+      internalID: 2248827293007521770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_9
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 324
+        width: 51
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b6307a023f027a0800000000000000
+      internalID: -6403851348554323071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_10
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 324
+        width: 57
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f0e3e01124f7ea0800000000000000
+      internalID: -5872902748047011985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_11
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 324
+        width: 51
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd3d86ad58f9cac0800000000000000
+      internalID: -3834260526619345461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 216
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a941a26311adad20800000000000000
+      internalID: 3291464007308888488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 216
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98e94b77e0609a30800000000000000
+      internalID: 4219979398168307869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 216
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bcbb387bea919c0800000000000000
+      internalID: -3955938694455899320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_15
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 216
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed79ebf370428510800000000000000
+      internalID: 1549872088660671971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_16
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 216
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15851dcf50f7b3a80800000000000000
+      internalID: -8486049409156425647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_17
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 216
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf712fad6513cff50800000000000000
+      internalID: 6916457376844486652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_18
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 216
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d927e7d06c35d840800000000000000
+      internalID: 5248167327406959062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_19
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 216
+        width: 45
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de24ab5a35b1ff2c0800000000000000
+      internalID: -4395764665213631763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_20
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 216
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3881135f4326590800000000000000
+      internalID: -7682519786645322753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_21
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 216
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c19ff04971c06490800000000000000
+      internalID: -7754985831806299710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_22
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 216
+        width: 45
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70087fa0dae2a5890800000000000000
+      internalID: -7468605711292334073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_23
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 216
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6f07f0a48848ec0800000000000000
+      internalID: -3565575153302571323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 108
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c528f0f0c09dd00800000000000000
+      internalID: 997842051263519811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 108
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70507b782968bcbe0800000000000000
+      internalID: -1455922090623957753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_26
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 108
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e130f2cf21abe40800000000000000
+      internalID: 5672867554956353165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_27
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 108
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b4f40db57ee5400800000000000000
+      internalID: 314943405485411097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_28
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 108
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11bc589965a150ed0800000000000000
+      internalID: -2448521863160804591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_29
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 108
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e153b3c8226460570800000000000000
+      internalID: 8432504466493355294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_30
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 108
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165279198547f4fe0800000000000000
+      internalID: -1202614651736087199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_31
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 108
+        width: 45
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7d52ec6df9c4050800000000000000
+      internalID: 5786175366194649019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_32
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 108
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e5815169d5a0140800000000000000
+      internalID: 4686661261412818519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_33
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 108
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0273b763fac5b80800000000000000
+      internalID: -8404650156049882933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_34
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 108
+        width: 45
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58685fd8c3abc9c00800000000000000
+      internalID: 908805994064479877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_35
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 108
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f365abe5142f78240800000000000000
+      internalID: 4794066690935248447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf30272a454706080800000000000000
+      internalID: -9196222532239096836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_37
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98a4ee5f84b8afa0800000000000000
+      internalID: -5789178793119405924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_38
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 0
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203b50600855ddce0800000000000000
+      internalID: -1378851902560292094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_39
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 0
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d28172ddce82d0f0800000000000000
+      internalID: -1093654744847514919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_40
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a3f713970ddb6d0800000000000000
+      internalID: -2972990960054617549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_41
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 0
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df891b09ea14f410800000000000000
+      internalID: 1509861363291885523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_42
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 0
+        width: 51
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c7bee0a97062950800000000000000
+      internalID: 6423830276747262983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_43
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 57
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59b24a623b6583f0800000000000000
+      internalID: -899194686315251364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_44
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 0
+        width: 51
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6665f9d234528ea50800000000000000
+      internalID: 6550526628468840038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_45
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 0
+        width: 48
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200236893bb084c10800000000000000
+      internalID: 2037891697368834050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_46
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 0
+        width: 57
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285bfc6a4f8af7b30800000000000000
+      internalID: 4287331139004118402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnight_47
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 0
+        width: 48
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7be63d7ceee83d0800000000000000
+      internalID: -3202359743000692791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
