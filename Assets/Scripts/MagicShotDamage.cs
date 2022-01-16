@@ -8,7 +8,8 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
     [SerializeField] GameObject WeaponShotCloneObject;
     public int MagicShotTakenDamage;
 
-    
+    public  enum ShotType { red = 1, blue = 2, purple = 3, green = 4 };
+    public  ShotType shoyType;
 
     public Health health;
 
@@ -18,7 +19,7 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
         health = GetComponent<Health>();
     }
 
-
+    
     
     public void Attack()
     {
@@ -49,6 +50,6 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
     }
     private void Update()
     {
-       
+        
     }
 }
