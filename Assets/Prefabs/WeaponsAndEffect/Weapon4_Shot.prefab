@@ -181,3 +181,5 @@ MonoBehaviour:
   WeaponShotCloneSp: {fileID: 0}
   WeaponShotCloneObject: {fileID: 7455712501832110885}
   MagicShotTakenDamage: 10
+  shoyType: 4
+  health: {fileID: 0}

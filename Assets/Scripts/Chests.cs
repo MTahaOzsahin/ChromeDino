@@ -6,18 +6,33 @@ public class Chests : Health
 {
     [SerializeField] Animator chesanimator;
     [SerializeField] GameObject shotforchest;
+
+    public enum ChestType { red = 1,blue = 2,purple = 3,green = 4};
+    public ChestType chestType;
+
+     MagicShotDamage.ShotType magicshotdamage;
+    
+   
     
     private void Awake()
     {
         chesanimator = GetComponent<Animator>();
     }
+    void Deneme()
+    {
+        if ((int)magicshotdamage == (int)chestType)
+        {
+            Debug.Log("Akýlsaððlýnýkaybet");
+        }
+       
+    }
+   
     public override void TakeDamage(int damage)
     {
         
-        if (shotforchest)
-        {
+       
            base.TakeDamage(damage);
-        }
+        
         
     }
     public override bool CheckIfDead()
@@ -37,5 +52,22 @@ public class Chests : Health
     {
         chesanimator.SetTrigger("IsDestroyed");
        
+    }
+    private void FixedUpdate()
+    {
+        //if (chestType == ChestType.red)
+        //{
+        //    Debug.Log("red");
+        //}
+        //if (chestType == ChestType.blue)
+        //{
+        //    Debug.Log("blue");
+        //}
+        //else
+        //{
+        //    Debug.Log("kalan");
+        //}
+        Deneme();
+        OnDeath();
     }
 }

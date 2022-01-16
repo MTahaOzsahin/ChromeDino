@@ -101,6 +101,8 @@ MonoBehaviour:
   ObjectHealth: 50
   chesanimator: {fileID: 0}
   shotforchest: {fileID: 9108630962168905625, guid: f924346e695fc504caa3bfb47505631e, type: 3}
+  chestType: 2
+  magicshotdamage: 0
 --- !u!61 &3562761551409297895
 BoxCollider2D:
   m_ObjectHideFlags: 0

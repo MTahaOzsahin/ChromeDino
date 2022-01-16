@@ -21,7 +21,22 @@ public class Enemy : Health
         EnemyAnimator = GetComponent<Animator>();      
         EnemyRigiBody2D = GetComponent<Rigidbody2D>();
     }
-   
+    public override void TakeDamage(int damage)
+    {
+        base.TakeDamage(damage);
+    }
+    public override bool CheckIfDead()
+    {
+        return base.CheckIfDead();
+    }
+    public override void OnDeath()
+    {
+        if (CheckIfDead())
+        {
+            
+            Destroy(this.gameObject);
+        }
+    }
     private void PlayAnimationBasedOnState()
     {
         switch (enemymovementstate)
@@ -94,5 +109,6 @@ public class Enemy : Health
     private void FixedUpdate()
     {
         PlayAnimationBasedOnState();
+        OnDeath();
     }
 }
