@@ -10,23 +10,25 @@ public class Chests : Health
     public enum ChestType { red = 1,blue = 2,purple = 3,green = 4};
     public ChestType chestType;
 
-     MagicShotDamage.ShotType magicshotdamage;
+     MagicShotDamage.ShotType magicshottype;
     
    
     
     private void Awake()
     {
-        chesanimator = GetComponent<Animator>();
+        chesanimator = GetComponent<Animator>();       
     }
     void Deneme()
     {
-        if ((int)magicshotdamage == (int)chestType)
-        {
-            Debug.Log("Akýlsaððlýnýkaybet");
-        }
+        magicshottype = GetComponent<MagicShotDamage>().shotType;
+        
        
     }
-   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.GetComponent<MagicShotDamage>().GetType().GetEnumName());
+    }
+
     public override void TakeDamage(int damage)
     {
         
@@ -67,7 +69,7 @@ public class Chests : Health
         //{
         //    Debug.Log("kalan");
         //}
-        Deneme();
+       // Deneme();
         OnDeath();
     }
 }

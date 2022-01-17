@@ -9,7 +9,7 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
     public int MagicShotTakenDamage;
 
     public  enum ShotType { red = 1, blue = 2, purple = 3, green = 4 };
-    public  ShotType shoyType;
+    public  ShotType shotType;
 
     public Health health;
 
