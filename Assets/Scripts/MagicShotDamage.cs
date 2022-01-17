@@ -8,8 +8,10 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
     [SerializeField] GameObject WeaponShotCloneObject;
     public int MagicShotTakenDamage;
 
-    public  enum ShotType { red = 1, blue = 2, purple = 3, green = 4 };
-    public  ShotType shotType;
+    //public enum ObjectType { red = 1, blue = 2, purple = 3, green = 4 };
+    //public ObjectType shotType;
+
+    
 
     public Health health;
 

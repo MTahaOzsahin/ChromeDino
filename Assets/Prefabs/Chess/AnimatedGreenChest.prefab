@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8067211167082976425}
   - component: {fileID: 2405788933210460258}
-  - component: {fileID: 4250988839089388161}
   - component: {fileID: -937659390149133913}
   - component: {fileID: -7277360175998017759}
   - component: {fileID: 5618242305653830152}
+  - component: {fileID: 4250988839089388161}
+  - component: {fileID: -222237679147209403}
   m_Layer: 9
   m_Name: AnimatedGreenChest
   m_TagString: Untagged
@@ -86,23 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4250988839089388161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194973642445779270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 380355c71c40c9e439fa16504a86b94f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectHealth: 50
-  chesanimator: {fileID: 0}
-  shotforchest: {fileID: 7455712501832110885, guid: 21dbdc982eed53544bab2c9c9c822bb4, type: 3}
-  chestType: 4
-  magicshotdamage: 0
 --- !u!61 &-937659390149133913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169,3 +153,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4250988839089388161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194973642445779270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380355c71c40c9e439fa16504a86b94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectHealth: 50
+  chesanimator: {fileID: 0}
+  shotforchest: {fileID: 0}
+--- !u!114 &-222237679147209403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194973642445779270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6065c7f449ec9814284d4baeee8c787d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 4

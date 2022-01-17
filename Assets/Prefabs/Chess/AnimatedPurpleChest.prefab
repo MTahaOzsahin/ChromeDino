@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3939792169480882148}
   - component: {fileID: 3939792169480882147}
   - component: {fileID: -8630674418331722144}
+  - component: {fileID: 7319473591510489189}
   m_Layer: 9
   m_Name: AnimatedPurpleChest
   m_TagString: Untagged
@@ -166,6 +167,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectHealth: 50
   chesanimator: {fileID: 0}
-  shotforchest: {fileID: 910426809063458375, guid: 1129c002bfd5d0144877914d1f16c603, type: 3}
-  chestType: 3
-  magicshotdamage: 0
+  shotforchest: {fileID: 0}
+--- !u!114 &7319473591510489189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780537630395436162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6065c7f449ec9814284d4baeee8c787d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 3
