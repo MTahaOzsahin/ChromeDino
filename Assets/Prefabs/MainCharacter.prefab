@@ -177,12 +177,10 @@ MonoBehaviour:
   Charachterrb2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
   maincharactertransform: {fileID: 0}
+  maincharactershield: {fileID: 2076010927427675590, guid: 76465926f65ec9d4fa8cda675332513b, type: 3}
   teleportLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  Weapon: {fileID: 752818752813650623, guid: 5483976c92c46b74fbd582f9d033c758, type: 3}
-  WeaponShot: {fileID: 9108630962168905625, guid: f924346e695fc504caa3bfb47505631e, type: 3}
-  WeaponShotClone: {fileID: 0}
 --- !u!114 &537899483901837347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,4 +225,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectHealth: 500
-  IsShotHappend: 0

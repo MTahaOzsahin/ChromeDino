@@ -75,7 +75,7 @@ public class Enemy : Health
         }
         
     }
-
+   
     void enemyMovement()
     {
         Collider2D collider2D = Physics2D.OverlapBox(EnemySpriteRenderer.bounds.center,new Vector2 (15f,1f), 0f, MainCharacterLayerMask);

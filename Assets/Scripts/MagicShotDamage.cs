@@ -6,10 +6,9 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
 {
     [SerializeField] SpriteRenderer WeaponShotCloneSp;
     [SerializeField] GameObject WeaponShotCloneObject;
-    public int MagicShotTakenDamage;
+    public static int MagicShotTakenDamage = 10;
 
-    //public enum ObjectType { red = 1, blue = 2, purple = 3, green = 4 };
-    //public ObjectType shotType;
+   
 
     
 

@@ -6,13 +6,9 @@ public class Chests : Health
 {
     [SerializeField] Animator chesanimator;
     [SerializeField] GameObject shotforchest;
+    public static int DamagefromMagicShot;
 
-    //public enum ObjectType { red = 1, blue = 2, purple = 3, green = 4 };
-    //public ObjectType chestType;
-
-    //MagicShotDamage.ObjectType MagicshotType;
-
-
+    
     ObjectTypeDetecter objectSelfType; 
 
 
@@ -21,10 +17,12 @@ public class Chests : Health
     {
         chesanimator = GetComponent<Animator>();
         objectSelfType = GetComponent<ObjectTypeDetecter>();
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        DamagefromMagicShot = MagicShotDamage.MagicShotTakenDamage;
         ObjectTypeDetecter objectType = collision.collider.GetComponent<ObjectTypeDetecter>();
         if (objectType != null)
         {
@@ -33,28 +31,32 @@ public class Chests : Health
                 case ObjectTypeDetecter.ObjectType.red:
                     if (objectSelfType.objectType == ObjectTypeDetecter.ObjectType.red)
                     {
-                        Debug.Log("you hit red ches with red shot");
+                        ObjectHealth -= DamagefromMagicShot;                       
+                        Destroy(collision.gameObject);
                     }
                     
                     break;
                 case ObjectTypeDetecter.ObjectType.blue:
                     if (objectSelfType.objectType == ObjectTypeDetecter.ObjectType.blue)
                     {
-                        Debug.Log("you hit blue ches with blue shot");
+                        ObjectHealth -= DamagefromMagicShot;
+                        Destroy(collision.gameObject);
                     }
                     
                     break;
                 case ObjectTypeDetecter.ObjectType.purple:
                     if (objectSelfType.objectType == ObjectTypeDetecter.ObjectType.purple)
                     {
-                        Debug.Log("you hit purple ches with purple shot");
+                        ObjectHealth -= DamagefromMagicShot;
+                        Destroy(collision.gameObject);
                     }
              
                     break;
                 case ObjectTypeDetecter.ObjectType.green:
                     if (objectSelfType.objectType == ObjectTypeDetecter.ObjectType.green)
                     {
-                        Debug.Log("you hit green ches with green shot");
+                        ObjectHealth -= DamagefromMagicShot;
+                        Destroy(collision.gameObject);
                     }
                    
                     break;
@@ -64,25 +66,7 @@ public class Chests : Health
         }
     }
 
-    //void Deneme()
-    //{
-    //    Debug.Log((int)shotType);
-    //    Debug.Log((int)chestType);
-
-
-    //}
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{     
-    //    MagicShotDamage magicShotDamage = collision.gameObject.GetComponent<MagicShotDamage>();
-    //    if (magicShotDamage.shotType == MagicShotDamage.ObjectType.red)
-    //    {
-    //        Debug.Log("a");
-    //    }
-    //    Debug.Log(collision.gameObject.GetComponent<MagicShotDamage.ObjectType>());
-    //    Debug.Log(collision.gameObject.GetComponent<MagicShotDamage>().shotType);
-
-    //}
+   
 
     public override void TakeDamage(int damage)
     {
@@ -112,19 +96,7 @@ public class Chests : Health
     }
     private void FixedUpdate()
     {
-        //if (chestType == ChestType.red)
-        //{
-        //    Debug.Log("red");
-        //}
-        //if (chestType == ChestType.blue)
-        //{
-        //    Debug.Log("blue");
-        //}
-        //else
-        //{
-        //    Debug.Log("kalan");
-        //}
-        //Deneme();
+       
         OnDeath();
         
     }

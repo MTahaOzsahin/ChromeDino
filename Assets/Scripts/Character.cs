@@ -12,7 +12,10 @@ public class Character : MonoBehaviour, IChildCheckList
 
     private Transform[] ChildList;
 
-  
+    [SerializeField] GameObject maincharactershield;
+    private GameObject ShieldClone;
+    float time = 2f;
+    float timer;
 
 
     public LayerMask teleportLayerMask;
@@ -36,9 +39,27 @@ public class Character : MonoBehaviour, IChildCheckList
         animator = GetComponent<Animator>();
         Charachterrb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        maincharactertransform = GetComponent<Transform>();
-       
-       
+        maincharactertransform = GetComponent<Transform>();   
+    }
+    private void Start()
+    {
+        timer = Time.deltaTime;
+    }
+    void ShieldUp()
+    {
+        
+        timer += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            
+            if (timer >= time)
+            {
+                ShieldClone = GameObject.Instantiate(maincharactershield, maincharactertransform.position, Quaternion.identity, maincharactertransform);
+                Destroy(ShieldClone, 1.1f);
+                timer = 0;
+            }
+           
+        }
     }
     public void SetCharacterState()
     {
@@ -147,6 +168,8 @@ public class Character : MonoBehaviour, IChildCheckList
     }
     private void Update()
     {
-       
+        
+           ShieldUp();
+        
     }
 }

@@ -11,9 +11,7 @@ public class PickableItemWeapons : PickableItems, IParticleSystem /*IMagicShot *
     public GameObject WeaponShotClone;
     private GameObject PickedWeapon;
     
-    //private GameObject[] swichedWeapon = new GameObject[4];
-
-    //[SerializeField] GameObject[] Weapons;
+    
 
     public LayerMask DamageableLayerMask;
    
