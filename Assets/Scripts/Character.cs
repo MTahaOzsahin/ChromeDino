@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour, IChildCheckList
+public class Character : Health, IChildCheckList
 {
     [Header("Components")]
     public Animator animator;

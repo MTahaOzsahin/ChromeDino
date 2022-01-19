@@ -8,10 +8,18 @@ public class Enemy : Health
     [SerializeField] GameObject EnemyGameObject;
     [SerializeField] Rigidbody2D EnemyRigiBody2D;
     [SerializeField] SpriteRenderer EnemySpriteRenderer;
+    [SerializeField] Transform EnemyTransform;
     [SerializeField] LayerMask MainCharacterLayerMask;
 
     [SerializeField] GameObject MainCharacterGameObject;
-    
+    [SerializeField] GameObject EnemyShot;
+    private GameObject EnemyShotClone;
+
+    float time = 3f;
+    float timer;
+
+    public enum EnemyType { yellow, grey, greyar,greenar};
+    public EnemyType enemytype;    
  
     [SerializeField] enum EnemyMovementState { idle,walking};
     private EnemyMovementState enemymovementstate;
@@ -20,6 +28,11 @@ public class Enemy : Health
     {
         EnemyAnimator = GetComponent<Animator>();      
         EnemyRigiBody2D = GetComponent<Rigidbody2D>();
+        EnemyTransform = GetComponent<Transform>();
+    }
+    private void Start()
+    {
+        timer = Time.deltaTime;
     }
     public override void TakeDamage(int damage)
     {
@@ -76,8 +89,10 @@ public class Enemy : Health
         
     }
    
+
     void enemyMovement()
     {
+        timer += Time.deltaTime;
         Collider2D collider2D = Physics2D.OverlapBox(EnemySpriteRenderer.bounds.center,new Vector2 (15f,1f), 0f, MainCharacterLayerMask);
         if (collider2D == null)
         {
@@ -86,19 +101,133 @@ public class Enemy : Health
            
         else
         {
-            if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+            switch (enemytype)
             {
-                EnemyGameObject.transform.eulerAngles = new Vector2(0, 180);
-                EnemyRigiBody2D.velocity = new Vector2(-1, 0);               
+                case EnemyType.yellow:
+                    if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+                    {
+                        if (timer >= time)
+                        {
+                            EnemyShotClone = GameObject.Instantiate(EnemyShot, 
+                                new Vector3(EnemyTransform.position.x-1f, EnemyTransform.position.y,EnemyTransform.position.z)
+                                , Quaternion.identity, EnemyTransform);
+                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
+                            Destroy(EnemyShotClone, 2f);
+                            timer = 0;
+                        }
+                    }
+                    else
+                    {
+                        if (timer >= time)
+                        {
+                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                                new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                                , Quaternion.identity, EnemyTransform);
+                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
+                            Destroy(EnemyShotClone, 2f);
+                            timer = 0;
+                        }
+                    }
+                    
+
+                    break;
+                case EnemyType.grey:
+                    if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+                    {
+                        if (timer >= time)
+                        {
+                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                                new Vector3(EnemyTransform.position.x - 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                                , Quaternion.identity, EnemyTransform);
+                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
+                            Destroy(EnemyShotClone, 2f);
+                            timer = 0;
+                        }
+                    }
+                    else
+                    {
+                        if (timer >= time)
+                        {
+                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                                new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                                , Quaternion.identity, EnemyTransform);
+                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
+                            Destroy(EnemyShotClone, 2f);
+                            timer = 0;
+                        }
+                    }
+                    break;
+                case EnemyType.greyar:
+                    if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+                    {
+                        EnemyGameObject.transform.eulerAngles = new Vector2(0, 180);
+                        EnemyRigiBody2D.velocity = new Vector2(-1, 0);
+                        if (timer >= time)
+                        {
+                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                                new Vector3(EnemyTransform.position.x - 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                                , Quaternion.identity, EnemyTransform);
+                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
+                            Destroy(EnemyShotClone, 2f);
+                            timer = 0;
+                        }
+
+
+                    }
+                    else
+                    {
+                        EnemyGameObject.transform.eulerAngles = new Vector2(0, 0);
+                        EnemyRigiBody2D.velocity = new Vector2(1, 0);
+                        if (timer >= time)
+                        {
+                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                                 new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                                 , Quaternion.identity, EnemyTransform);
+                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
+                            Destroy(EnemyShotClone, 2f);
+                            timer = 0;
+                        }
+                    }
+                    break;
+                case EnemyType.greenar:
+                    if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+                    {
+                        EnemyGameObject.transform.eulerAngles = new Vector2(0, 180);
+                        EnemyRigiBody2D.velocity = new Vector2(-1, 0);
+                        if (timer >= time)
+                        {
+                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                                new Vector3(EnemyTransform.position.x - 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                                , Quaternion.identity, EnemyTransform);
+                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
+                            Destroy(EnemyShotClone, 2f);
+                            timer = 0;
+                        }
+                    }
+                    else
+                    {
+                        EnemyGameObject.transform.eulerAngles = new Vector2(0, 0);
+                        EnemyRigiBody2D.velocity = new Vector2(1, 0);
+                        if (timer >= time)
+                        {
+                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                                new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                                , Quaternion.identity, EnemyTransform);
+                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
+                            Destroy(EnemyShotClone, 2f);
+                            timer = 0;
+                        }
+                    }
+                    break;
+                default:
+                    break;
             }
-            else
-            {
-                EnemyGameObject.transform.eulerAngles = new Vector2(0, 0);
-                EnemyRigiBody2D.velocity = new Vector2(1, 0);               
-            }
+            
         }
         
     }
+   
+   
     
     private void Update()
     {

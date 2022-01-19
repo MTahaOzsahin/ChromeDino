@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: -7441977521899203198}
   - component: {fileID: 537899483901837347}
   - component: {fileID: 8464805458588900596}
-  - component: {fileID: -8317203661743089794}
   m_Layer: 12
   m_Name: MainCharacter
   m_TagString: player
@@ -173,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c9d08f853309b41b285b29e26539e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObjectHealth: 100
   animator: {fileID: 0}
   Charachterrb2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
@@ -212,16 +212,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-8317203661743089794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3591678998522283357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92e2cd7e3915e4342b4b7100792f48d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectHealth: 500

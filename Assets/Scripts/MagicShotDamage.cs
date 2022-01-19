@@ -6,7 +6,10 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
 {
     [SerializeField] SpriteRenderer WeaponShotCloneSp;
     [SerializeField] GameObject WeaponShotCloneObject;
+    [SerializeField] LayerMask MainCharacterDamageLayer;
     public static int MagicShotTakenDamage = 10;
+
+
 
    
 
@@ -24,7 +27,7 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
     
     public void Attack()
     {
-        Collider2D[] hitResult = Physics2D.OverlapCircleAll(WeaponShotCloneSp.bounds.center, 0.4f, DamageableLayerMask);
+        Collider2D[] hitResult = Physics2D.OverlapCircleAll(WeaponShotCloneSp.bounds.center, 0.6f, DamageableLayerMask | MainCharacterDamageLayer);
         if (hitResult == null)
             return;
         foreach (Collider2D hit in hitResult)
@@ -36,14 +39,10 @@ public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
             }
             
         }
+        
     }
     
-    private void OnDrawGizmosSelected()
-    {   
-        Gizmos.color = new Color(1, 1, 0, 0.75F);
-        Gizmos.DrawCube(WeaponShotCloneSp.bounds.center, new Vector3(1.1f, 0.3f,0));
-    }
-
+    
 
     private void FixedUpdate()
     {      

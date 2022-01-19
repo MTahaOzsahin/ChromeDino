@@ -181,7 +181,9 @@ MonoBehaviour:
     m_Bits: 512
   WeaponShotCloneSp: {fileID: 0}
   WeaponShotCloneObject: {fileID: 9108630962168905625}
-  MagicShotTakenDamage: 10
+  MainCharacterDamageLayer:
+    serializedVersion: 2
+    m_Bits: 4096
   health: {fileID: 0}
 --- !u!114 &-4430270372409779671
 MonoBehaviour:

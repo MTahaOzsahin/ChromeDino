@@ -153,7 +153,9 @@ MonoBehaviour:
   MainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  MainCharacterGameObject: {fileID: 3591678998522283357, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
+  MainCharacterGameObject: {fileID: 0}
+  EnemyShot: {fileID: 6786598595347564198, guid: dc0e9d4efc7abb7489427aa158f17ffe, type: 3}
+  enemytype: 0
 --- !u!95 &2720305814242953912
 Animator:
   serializedVersion: 3
