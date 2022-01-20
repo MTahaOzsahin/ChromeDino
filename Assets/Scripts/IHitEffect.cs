@@ -2,7 +2,7 @@ using System.Collections;
 
 using UnityEngine;
 
-public interface IOnDeath 
+public interface  IHitEffect
 {
-    void OnDeath();
+    void HitEffect();
 }

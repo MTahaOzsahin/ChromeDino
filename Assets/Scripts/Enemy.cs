@@ -1,8 +1,9 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Health
+public class Enemy : Health , IHitEffect
 {
     [SerializeField] Animator EnemyAnimator;
     [SerializeField] GameObject EnemyGameObject;
@@ -36,6 +37,7 @@ public class Enemy : Health
     }
     public override void TakeDamage(int damage)
     {
+        HitEffect();
         base.TakeDamage(damage);
     }
     public override bool CheckIfDead()
@@ -88,9 +90,35 @@ public class Enemy : Health
         }
         
     }
+    void LeftAttack()
+    {
+        timer += Time.deltaTime;
+        if (timer >= time)
+        {
+            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                new Vector3(EnemyTransform.position.x - 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                , Quaternion.identity, EnemyTransform);
+            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
+            Destroy(EnemyShotClone, 2f);
+            timer = 0;
+        }
+    }
+    void RightAttack()
+    {
+        timer += Time.deltaTime;
+        if (timer >= time)
+        {
+            EnemyShotClone = GameObject.Instantiate(EnemyShot,
+                new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
+                , Quaternion.identity, EnemyTransform);
+            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
+            Destroy(EnemyShotClone, 2f);
+            timer = 0;
+        }
+    }
    
 
-    void enemyMovement()
+    void EnemyManager()
     {
         timer += Time.deltaTime;
         Collider2D collider2D = Physics2D.OverlapBox(EnemySpriteRenderer.bounds.center,new Vector2 (15f,1f), 0f, MainCharacterLayerMask);
@@ -106,27 +134,11 @@ public class Enemy : Health
                 case EnemyType.yellow:
                     if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
                     {
-                        if (timer >= time)
-                        {
-                            EnemyShotClone = GameObject.Instantiate(EnemyShot, 
-                                new Vector3(EnemyTransform.position.x-1f, EnemyTransform.position.y,EnemyTransform.position.z)
-                                , Quaternion.identity, EnemyTransform);
-                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
-                            Destroy(EnemyShotClone, 2f);
-                            timer = 0;
-                        }
+                        LeftAttack();
                     }
                     else
-                    {
-                        if (timer >= time)
-                        {
-                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                                new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                                , Quaternion.identity, EnemyTransform);
-                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
-                            Destroy(EnemyShotClone, 2f);
-                            timer = 0;
-                        }
+                    {                      
+                        RightAttack();                        
                     }
                     
 
@@ -134,27 +146,11 @@ public class Enemy : Health
                 case EnemyType.grey:
                     if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
                     {
-                        if (timer >= time)
-                        {
-                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                                new Vector3(EnemyTransform.position.x - 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                                , Quaternion.identity, EnemyTransform);
-                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
-                            Destroy(EnemyShotClone, 2f);
-                            timer = 0;
-                        }
+                        LeftAttack();
                     }
                     else
                     {
-                        if (timer >= time)
-                        {
-                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                                new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                                , Quaternion.identity, EnemyTransform);
-                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
-                            Destroy(EnemyShotClone, 2f);
-                            timer = 0;
-                        }
+                        RightAttack();
                     }
                     break;
                 case EnemyType.greyar:
@@ -162,15 +158,7 @@ public class Enemy : Health
                     {
                         EnemyGameObject.transform.eulerAngles = new Vector2(0, 180);
                         EnemyRigiBody2D.velocity = new Vector2(-1, 0);
-                        if (timer >= time)
-                        {
-                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                                new Vector3(EnemyTransform.position.x - 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                                , Quaternion.identity, EnemyTransform);
-                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
-                            Destroy(EnemyShotClone, 2f);
-                            timer = 0;
-                        }
+                        LeftAttack();
 
 
                     }
@@ -178,15 +166,7 @@ public class Enemy : Health
                     {
                         EnemyGameObject.transform.eulerAngles = new Vector2(0, 0);
                         EnemyRigiBody2D.velocity = new Vector2(1, 0);
-                        if (timer >= time)
-                        {
-                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                                 new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                                 , Quaternion.identity, EnemyTransform);
-                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
-                            Destroy(EnemyShotClone, 2f);
-                            timer = 0;
-                        }
+                        RightAttack();
                     }
                     break;
                 case EnemyType.greenar:
@@ -194,29 +174,13 @@ public class Enemy : Health
                     {
                         EnemyGameObject.transform.eulerAngles = new Vector2(0, 180);
                         EnemyRigiBody2D.velocity = new Vector2(-1, 0);
-                        if (timer >= time)
-                        {
-                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                                new Vector3(EnemyTransform.position.x - 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                                , Quaternion.identity, EnemyTransform);
-                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
-                            Destroy(EnemyShotClone, 2f);
-                            timer = 0;
-                        }
+                        LeftAttack();
                     }
                     else
                     {
                         EnemyGameObject.transform.eulerAngles = new Vector2(0, 0);
                         EnemyRigiBody2D.velocity = new Vector2(1, 0);
-                        if (timer >= time)
-                        {
-                            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                                new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                                , Quaternion.identity, EnemyTransform);
-                            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
-                            Destroy(EnemyShotClone, 2f);
-                            timer = 0;
-                        }
+                        RightAttack();
                     }
                     break;
                 default:
@@ -230,14 +194,20 @@ public class Enemy : Health
    
     
     private void Update()
-    {
-        enemyMovement();
-        SetEnemyState();
-        
+    {       
+        SetEnemyState();        
     }
     private void FixedUpdate()
     {
+        EnemyManager();
         PlayAnimationBasedOnState();
         OnDeath();
+    }
+
+    public void HitEffect()
+    {
+        EnemyTransform.DOShakePosition(0.3f, new Vector3(0.3f, 0.1f, 0), 10, 50);
+        Tween colorTween = EnemySpriteRenderer.DOBlendableColor(Color.red, 0.2f);
+        colorTween.OnComplete(() => EnemySpriteRenderer.DOBlendableColor(Color.white, 0.05f));
     }
 }

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickableItemWeapons : PickableItems, IParticleSystem /*IMagicShot */
+public class PickableItemWeapons : PickableItems
 {
     [Header("Components")]
     [SerializeField] GameObject Weapon;   
-    [SerializeField] ParticleSystem particleSystemeffect;
+   
     [SerializeField] GameObject WeaponShot;
     public GameObject WeaponShotClone;
     private GameObject PickedWeapon;
@@ -19,11 +19,7 @@ public class PickableItemWeapons : PickableItems, IParticleSystem /*IMagicShot *
 
 
 
-    private void Awake()
-    {
-        particleSystemeffect = GetComponent<ParticleSystem>();
-        
-}
+   
     public override bool IsMainCharacterNear()
     {
         Collider2D collider2D = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.01f, MainCharacterLayerMask);
@@ -70,15 +66,7 @@ public class PickableItemWeapons : PickableItems, IParticleSystem /*IMagicShot *
    
    
 
-    public void ParticleSystemConfig()
-    {
-        
-        if (Input.GetKeyDown(KeyCode.Space) && !Weapon.transform.parent == false)
-        {
-            particleSystemeffect.Play();
-        }
-        
-    }
+   
     public void MagicShot()
     {
         Vector3 mouseposition = Input.mousePosition;

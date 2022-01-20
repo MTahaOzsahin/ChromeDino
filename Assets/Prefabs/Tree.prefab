@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5740400613157737429}
   - component: {fileID: 7871284095689024308}
   - component: {fileID: 313723494083748457}
-  - component: {fileID: 8682081055427189085}
   - component: {fileID: 5253339708808941911}
+  - component: {fileID: 5659291212505760953}
   m_Layer: 9
   m_Name: Tree
   m_TagString: Untagged
@@ -106,19 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8682081055427189085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3605430098182571185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92e2cd7e3915e4342b4b7100792f48d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectHealth: 50
 --- !u!68 &5253339708808941911
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -160,3 +147,16 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &5659291212505760953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605430098182571185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e7d9a15b4550844bba35fb1c5b9a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectHealth: 50

@@ -1,13 +1,14 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : Health, IChildCheckList
+public class Character : Health, IChildCheckList, IHitEffect
 {
     [Header("Components")]
     public Animator animator;
-    public Rigidbody2D Charachterrb2D;
-    public SpriteRenderer spriteRenderer;
+    public Rigidbody2D maincharacterRigibody2D;
+    public SpriteRenderer maincharacterSpriteRenderer;
     public Transform maincharactertransform;
 
     private Transform[] ChildList;
@@ -37,8 +38,8 @@ public class Character : Health, IChildCheckList
     {
         characterMovement = GetComponent<CharacterMovement>();
         animator = GetComponent<Animator>();
-        Charachterrb2D = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        maincharacterRigibody2D = GetComponent<Rigidbody2D>();
+        maincharacterSpriteRenderer = GetComponent<SpriteRenderer>();
         maincharactertransform = GetComponent<Transform>();   
     }
     private void Start()
@@ -63,24 +64,24 @@ public class Character : Health, IChildCheckList
     }
     public void SetCharacterState()
     {
-        if (Charachterrb2D.velocity.x <=  1f && Charachterrb2D.velocity.x >= -1f &&
-            Charachterrb2D.velocity.y <= 1f && Charachterrb2D.velocity.y >= -1f)
+        if (maincharacterRigibody2D.velocity.x <=  1f && maincharacterRigibody2D.velocity.x >= -1f &&
+            maincharacterRigibody2D.velocity.y <= 1f && maincharacterRigibody2D.velocity.y >= -1f)
         {
             characterMovement.SetMovementState(CharacterMovement.MovementStates.Idle);
         }
-        else if (Charachterrb2D.velocity.x < 0)
+        else if (maincharacterRigibody2D.velocity.x < 0)
         {
             characterMovement.SetMovementState(CharacterMovement.MovementStates.Walking);
         }
-        else if (Charachterrb2D.velocity.x > 0)
+        else if (maincharacterRigibody2D.velocity.x > 0)
         {
             characterMovement.SetMovementState(CharacterMovement.MovementStates.Walking);
         }
-        else if (Charachterrb2D.velocity.y < 0)
+        else if (maincharacterRigibody2D.velocity.y < 0)
         {
             characterMovement.SetMovementState(CharacterMovement.MovementStates.WalkingDown);
         }
-        else if (Charachterrb2D.velocity.y > 0)
+        else if (maincharacterRigibody2D.velocity.y > 0)
         {
             characterMovement.SetMovementState(CharacterMovement.MovementStates.WalkingUp);
         }       
@@ -91,7 +92,7 @@ public class Character : Health, IChildCheckList
     {
         
 
-        Collider2D collider = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.25f);
+        Collider2D collider = Physics2D.OverlapCircle(maincharacterSpriteRenderer.bounds.center, 0.25f);
         if (collider.CompareTag("teleportblue1"))
         {
            
@@ -154,17 +155,33 @@ public class Character : Health, IChildCheckList
 
 
     }
-
-    
+    public override void TakeDamage(int damage)
+    {
+        HitEffect();
+        base.TakeDamage(damage);
+    }
+    public override bool CheckIfDead()
+    {
+        return base.CheckIfDead();
+    }
+    public override void OnDeath()
+    {
+        base.OnDeath();
+    }
+    public void HitEffect()
+    {
+        maincharactertransform.DOShakePosition(0.3f, new Vector3(0.3f, 0.1f, 0), 10, 50);
+        Tween colorTween = maincharacterSpriteRenderer.DOBlendableColor(Color.red, 0.2f);
+        colorTween.OnComplete(() => maincharacterSpriteRenderer.DOBlendableColor(Color.white, 0.05f));
+    }
 
     private void FixedUpdate()
     {
         SetCharacterState();
         IsTeleportNear();
         ChildCheckList();
-        
-       
-       
+        OnDeath();
+
     }
     private void Update()
     {

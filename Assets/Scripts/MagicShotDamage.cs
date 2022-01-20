@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicShotDamage : PickableItemWeapons  /*IDamageable<int>*/
+public class MagicShotDamage : PickableItemWeapons  
 {
     [SerializeField] SpriteRenderer WeaponShotCloneSp;
     [SerializeField] GameObject WeaponShotCloneObject;
