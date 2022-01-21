@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7345565872752195703}
   - component: {fileID: 2135187334371214288}
-  - component: {fileID: -4050387993428580839}
   - component: {fileID: 3291498333763720786}
   - component: {fileID: 5964489082443755302}
+  - component: {fileID: -5063012600624472858}
   m_Layer: 8
   m_Name: keyRed
   m_TagString: redKey
@@ -85,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4050387993428580839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8730353635054745362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca1bc4f66848da04c8079b3dacd88967, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  spriteNeutral: {fileID: 21300000, guid: d32d29bc14ee9884496298a3c9a37cbb, type: 3}
-  spriteHighlighted: {fileID: 21300000, guid: 5336ad0e70183034a8fc9f4a44d9897a, type: 3}
-  maxSize: 1
 --- !u!61 &3291498333763720786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,11 +123,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6394b68bea2796f48a4fb6bed3d70f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 2135187334371214288}
-  itemcollider2d: {fileID: 0}
-  maincharacter: {fileID: 0}
+  objectSpriteRenderer: {fileID: 0}
+  objectCollider2D: {fileID: 0}
+  maincharacterGameObject: {fileID: 0}
+  ChildList: []
   MainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  keyprefab: {fileID: 8730353635054745362}
-  clonedkeyprefab: {fileID: 0}
+  keyPrefab: {fileID: 8730353635054745362}
+  keyTypeSelection: 0
+--- !u!114 &-5063012600624472858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8730353635054745362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6065c7f449ec9814284d4baeee8c787d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 1

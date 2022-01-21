@@ -4,49 +4,55 @@ using UnityEngine;
 
 public class Doors : MonoBehaviour
 {
-    public Collider2D doorcollider2d;
-    public GameObject MainCharacter;
-    
+    ObjectTypeDetecter objectSelfType;
+    [SerializeField] GameObject clonedKeyPrefab;
 
-    public bool isGreenKeyHere = false;
-    public bool isRedKeyHere = false;
-    public bool isOrangeKeyHere = false;
-
+   
     private void Awake()
     {
-        doorcollider2d = GetComponent<Collider2D>();       
+        objectSelfType = GetComponent<ObjectTypeDetecter>();
     }
-   
-    void KeyCheck()
-    {
-        if (MainCharacter.transform.Find("keyGreen(Clone)"))
-        {
-            isGreenKeyHere = true;            
-        }
-        if (!MainCharacter.transform.Find("keyGreen(Clone)"))
-        {
-            isGreenKeyHere = false;
-        }
-        if (MainCharacter.transform.Find("keyOrange(Clone)"))
-        {
-            isOrangeKeyHere = true;            
-        }
-        if (!MainCharacter.transform.Find("keyOrange(Clone)"))
-        {
-            isOrangeKeyHere = false;
-        }
-        if (MainCharacter.transform.Find("keyRed(Clone)"))
-        {
-            isRedKeyHere = true;           
-        }
-        if (!MainCharacter.transform.Find("keyRed(Clone)"))
-        {
-            isRedKeyHere = false;
-        }
+    
 
-    }
-    private void FixedUpdate()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        KeyCheck();
+        
+        ObjectTypeDetecter objectType = collision.collider.GetComponentInChildren<ObjectTypeDetecter>();
+        if (objectType != null)
+        {
+            switch (objectSelfType.objectType)
+            {
+                case ObjectTypeDetecter.ObjectType.red:
+                    if (objectSelfType.objectType == objectType.objectType)
+                    {                       
+                        Destroy(this.gameObject);
+                        collision.collider.gameObject.transform.GetChild(0).transform.parent = null;
+                    }
+                    break;
+                case ObjectTypeDetecter.ObjectType.blue:
+                    if (objectSelfType.objectType == objectType.objectType)
+                    {
+                        Destroy(this.gameObject);
+                        collision.collider.gameObject.transform.DetachChildren();
+                    }
+                    break;
+                case ObjectTypeDetecter.ObjectType.purple:
+                    if (objectSelfType.objectType == objectType.objectType)
+                    {
+                        Destroy(this.gameObject);
+                        collision.collider.gameObject.transform.DetachChildren();
+                    }
+                    break;
+                case ObjectTypeDetecter.ObjectType.green:
+                    if (objectSelfType.objectType == objectType.objectType)
+                    {
+                        Destroy(this.gameObject);
+                        collision.collider.gameObject.transform.DetachChildren();
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

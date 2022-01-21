@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PickableItems : MonoBehaviour 
 {
-    public SpriteRenderer spriteRenderer;
-    public Collider2D itemcollider2d;
+    public SpriteRenderer objectSpriteRenderer;
+    public Collider2D objectCollider2D;
 
-    public GameObject maincharacter;
+    public GameObject maincharacterGameObject;
 
     public Transform[] ChildList;
    
@@ -19,15 +19,15 @@ public class PickableItems : MonoBehaviour
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        itemcollider2d = GetComponent<Collider2D>();
+        objectSpriteRenderer = GetComponent<SpriteRenderer>();
+        objectCollider2D = GetComponent<Collider2D>();
         
     }
 
     public virtual bool IsMainCharacterNear()
     {
 
-        Collider2D collider2D = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.5f, MainCharacterLayerMask);
+        Collider2D collider2D = Physics2D.OverlapCircle(objectSpriteRenderer.bounds.center, 0.5f, MainCharacterLayerMask);
 
         if (collider2D)
         {           

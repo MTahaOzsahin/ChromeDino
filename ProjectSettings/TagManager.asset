@@ -17,7 +17,8 @@ TagManager:
   - doorgreen
   - redKey
   - greenKey
-  - orangeKey
+  - purpleKey
+  - blueKey
   layers:
   - Default
   - TransparentFX

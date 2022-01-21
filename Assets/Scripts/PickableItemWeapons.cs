@@ -22,7 +22,7 @@ public class PickableItemWeapons : PickableItems
    
     public override bool IsMainCharacterNear()
     {
-        Collider2D collider2D = Physics2D.OverlapCircle(spriteRenderer.bounds.center, 0.01f, MainCharacterLayerMask);
+        Collider2D collider2D = Physics2D.OverlapCircle(objectSpriteRenderer.bounds.center, 0.01f, MainCharacterLayerMask);
 
         if (collider2D)
         {           
@@ -35,29 +35,29 @@ public class PickableItemWeapons : PickableItems
   
     private void PickupWeapon()
     {
-        if (IsMainCharacterNear() && Input.GetKeyDown(KeyCode.E) && maincharacter.transform.rotation.y >= 0 )
+        if (IsMainCharacterNear() && Input.GetKeyDown(KeyCode.E) && maincharacterGameObject.transform.rotation.y >= 0 )
         {
-            if (maincharacter.transform.childCount != 0)
+            if (maincharacterGameObject.transform.childCount != 0)
             {
-                maincharacter.transform.DetachChildren();
+                maincharacterGameObject.transform.DetachChildren();
                 Destroy(PickedWeapon);
             }
-            PickedWeapon = GameObject.Instantiate(Weapon, new Vector3(maincharacter.transform.position.x + 0.5f,
-                maincharacter.transform.position.y + 0.25f, maincharacter.transform.position.z),
-                Quaternion.Euler(0, 0, 45), maincharacter.transform);
+            PickedWeapon = GameObject.Instantiate(Weapon, new Vector3(maincharacterGameObject.transform.position.x + 0.5f,
+                maincharacterGameObject.transform.position.y + 0.25f, maincharacterGameObject.transform.position.z),
+                Quaternion.Euler(0, 0, 45), maincharacterGameObject.transform);
                 PickedWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
             Destroy(gameObject);
         }
-        else if (IsMainCharacterNear()  && Input.GetKeyDown(KeyCode.E) && maincharacter.transform.rotation.y <= 0)
+        else if (IsMainCharacterNear()  && Input.GetKeyDown(KeyCode.E) && maincharacterGameObject.transform.rotation.y <= 0)
         {
-            if (maincharacter.transform.childCount != 0)
+            if (maincharacterGameObject.transform.childCount != 0)
             {
-                maincharacter.transform.DetachChildren();
+                maincharacterGameObject.transform.DetachChildren();
                 Destroy(PickedWeapon);
             }
-            PickedWeapon = GameObject.Instantiate(Weapon, new Vector3(maincharacter.transform.position.x - 0.5f,
-                maincharacter.transform.position.y + 0.25f, maincharacter.transform.position.z),
-                Quaternion.Euler(0, -180, 45), maincharacter.transform);
+            PickedWeapon = GameObject.Instantiate(Weapon, new Vector3(maincharacterGameObject.transform.position.x - 0.5f,
+                maincharacterGameObject.transform.position.y + 0.25f, maincharacterGameObject.transform.position.z),
+                Quaternion.Euler(0, -180, 45), maincharacterGameObject.transform);
             PickedWeapon.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
             Destroy(gameObject);
         }
@@ -71,11 +71,11 @@ public class PickableItemWeapons : PickableItems
     {
         Vector3 mouseposition = Input.mousePosition;
         mouseposition = Camera.main.ScreenToWorldPoint(mouseposition);
-        mouseposition = mouseposition - maincharacter.transform.position;
+        mouseposition = mouseposition - maincharacterGameObject.transform.position;
         if (Input.GetKeyDown(KeyCode.Mouse0) && !Weapon.transform.parent == false)
         {
 
-            if (maincharacter.transform.rotation.y >= 0)
+            if (maincharacterGameObject.transform.rotation.y >= 0)
             {
                 WeaponShotClone = GameObject.Instantiate(WeaponShot, new Vector3(Weapon.transform.position.x + 0.4f,
                 Weapon.transform.position.y + 0.25f, Weapon.transform.position.z), Quaternion.identity);
