@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,19 +6,23 @@ using UnityEngine;
 public class Doors : MonoBehaviour
 {
     ObjectTypeDetecter objectSelfType;
-    [SerializeField] GameObject clonedKeyPrefab;
 
-   
+    public static event Action doorDestoyed;
+
     private void Awake()
     {
         objectSelfType = GetComponent<ObjectTypeDetecter>();
     }
     
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        ObjectTypeDetecter objectType = collision.collider.GetComponentInChildren<ObjectTypeDetecter>();
+
+    ObjectTypeDetecter objectType = collision.collider.GetComponentInChildren<ObjectTypeDetecter>();
+        
+
         if (objectType != null)
         {
             switch (objectSelfType.objectType)
@@ -27,6 +32,7 @@ public class Doors : MonoBehaviour
                     {                       
                         Destroy(this.gameObject);
                         collision.collider.gameObject.transform.GetChild(0).transform.parent = null;
+                        doorDestoyed?.Invoke();
                     }
                     break;
                 case ObjectTypeDetecter.ObjectType.blue:
@@ -55,4 +61,6 @@ public class Doors : MonoBehaviour
             }
         }
     }
+    
+    
 }

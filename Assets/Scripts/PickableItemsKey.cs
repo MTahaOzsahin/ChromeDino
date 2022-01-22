@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,23 @@ using UnityEngine;
 public class PickableItemsKey : PickableItems
 {
     [SerializeField] GameObject keyPrefab;
-    private GameObject clonedkeyPrefab;
+    public GameObject clonedkeyPrefab;
     public enum keyTypeSelect { Red, Purple, Green, Blue};
     public keyTypeSelect keyTypeSelection;
 
-   
+    private void OnEnable()
+    {
+        Doors.doorDestoyed += IsDoorDestoyedChecker;
+    }
+    private void OnDisable()
+    {
+        Doors.doorDestoyed -= IsDoorDestoyedChecker;
+    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         int a = 1;
         if (maincharacterGameObject.transform.rotation.y == 0)
@@ -59,10 +70,17 @@ public class PickableItemsKey : PickableItems
             default:
                 break;
         }
+
+        
     }
 
+   
 
-
+    void IsDoorDestoyedChecker()
+    {
+        Debug.Log("eben");
+        Destroy(gameObject.transform.Find("keyRed(Clone)"));
+    }
 
 
 
