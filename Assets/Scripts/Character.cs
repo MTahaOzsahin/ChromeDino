@@ -42,10 +42,12 @@ public class Character : Health, IChildCheckList, IHitEffect
         maincharacterSpriteRenderer = GetComponent<SpriteRenderer>();
         maincharactertransform = GetComponent<Transform>();   
     }
+   
     private void Start()
     {
         timer = Time.deltaTime;
     }
+   
     void ShieldUp()
     {
         

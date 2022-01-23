@@ -6,8 +6,10 @@ using UnityEngine;
 public class Doors : MonoBehaviour
 {
     ObjectTypeDetecter objectSelfType;
-
-    public static event Action doorDestoyed;
+    [SerializeField] GameObject mainCamera;
+    
+    public static event Action doorUnlocked;
+   
 
     private void Awake()
     {
@@ -20,7 +22,8 @@ public class Doors : MonoBehaviour
     {
         
 
-    ObjectTypeDetecter objectType = collision.collider.GetComponentInChildren<ObjectTypeDetecter>();
+        ObjectTypeDetecter objectType = mainCamera.GetComponentInChildren<ObjectTypeDetecter>();
+
         
 
         if (objectType != null)
@@ -29,36 +32,41 @@ public class Doors : MonoBehaviour
             {
                 case ObjectTypeDetecter.ObjectType.red:
                     if (objectSelfType.objectType == objectType.objectType)
-                    {                       
-                        Destroy(this.gameObject);
-                        collision.collider.gameObject.transform.GetChild(0).transform.parent = null;
-                        doorDestoyed?.Invoke();
-                    }
-                    break;
-                case ObjectTypeDetecter.ObjectType.blue:
-                    if (objectSelfType.objectType == objectType.objectType)
                     {
                         Destroy(this.gameObject);
-                        collision.collider.gameObject.transform.DetachChildren();
+                        mainCamera.transform.GetChild(0).gameObject.SetActive(false);
                     }
                     break;
                 case ObjectTypeDetecter.ObjectType.purple:
                     if (objectSelfType.objectType == objectType.objectType)
                     {
                         Destroy(this.gameObject);
-                        collision.collider.gameObject.transform.DetachChildren();
+                        mainCamera.transform.GetChild(1).gameObject.SetActive(false);
+
                     }
                     break;
                 case ObjectTypeDetecter.ObjectType.green:
                     if (objectSelfType.objectType == objectType.objectType)
                     {
                         Destroy(this.gameObject);
-                        collision.collider.gameObject.transform.DetachChildren();
+                        mainCamera.transform.GetChild(2).gameObject.SetActive(false);
+
                     }
                     break;
+                case ObjectTypeDetecter.ObjectType.blue:
+                    if (objectSelfType.objectType == objectType.objectType)
+                    {
+                        Destroy(this.gameObject);
+                        mainCamera.transform.GetChild(3).gameObject.SetActive(false);
+
+                    }
+                    break;
+                
+                
                 default:
                     break;
             }
+            doorUnlocked?.Invoke();
         }
     }
     

@@ -328,6 +328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 257753728}
     m_Modifications:
+    - target: {fileID: 3619769994579349561, guid: c5af14a4950601340b76456fd2dbe82c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4773549630872028643, guid: c5af14a4950601340b76456fd2dbe82c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -376,6 +380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: keyPurple
       objectReference: {fileID: 0}
+    - target: {fileID: 8569747979024611654, guid: c5af14a4950601340b76456fd2dbe82c, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 179001538}
     - target: {fileID: 8569747979024611654, guid: c5af14a4950601340b76456fd2dbe82c, type: 3}
       propertyPath: maincharacterGameObject
       value: 
@@ -443,11 +451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.37
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.97
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 8289631472529674958, guid: 1485c7fe33c4c2d49b4f417e99a55f83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -501,12 +509,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 257753728}
     m_Modifications:
     - target: {fileID: 1227545285, guid: 8d4ad05088a89624c90ecb9a355bffc9, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 179001538}
+    - target: {fileID: 1227545285, guid: 8d4ad05088a89624c90ecb9a355bffc9, type: 3}
       propertyPath: maincharacterGameObject
       value: 
       objectReference: {fileID: 95499966}
     - target: {fileID: 5031871930612053060, guid: 8d4ad05088a89624c90ecb9a355bffc9, type: 3}
       propertyPath: m_Name
       value: keyGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219778444715890896, guid: 8d4ad05088a89624c90ecb9a355bffc9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7773415624352501722, guid: 8d4ad05088a89624c90ecb9a355bffc9, type: 3}
       propertyPath: m_RootOrder
@@ -566,6 +582,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 257753728}
     m_Modifications:
+    - target: {fileID: 2135187334371214288, guid: f8f92e60a81359d40a8a68cd62296714, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964489082443755302, guid: f8f92e60a81359d40a8a68cd62296714, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 179001538}
     - target: {fileID: 5964489082443755302, guid: f8f92e60a81359d40a8a68cd62296714, type: 3}
       propertyPath: maincharacterGameObject
       value: 
@@ -576,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7345565872752195703, guid: f8f92e60a81359d40a8a68cd62296714, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9
+      value: 2.06
       objectReference: {fileID: 0}
     - target: {fileID: 7345565872752195703, guid: f8f92e60a81359d40a8a68cd62296714, type: 3}
       propertyPath: m_LocalPosition.y
@@ -693,6 +717,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorsGreen
       objectReference: {fileID: 0}
+    - target: {fileID: 1737062525828822057, guid: a163c804a42c59043a283733c16464f1, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 179001538}
+    - target: {fileID: 1737062525828822057, guid: a163c804a42c59043a283733c16464f1, type: 3}
+      propertyPath: maincharacterGameObject
+      value: 
+      objectReference: {fileID: 95499966}
     - target: {fileID: 4856536009096479324, guid: a163c804a42c59043a283733c16464f1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -785,6 +817,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1346489249}
     m_Modifications:
+    - target: {fileID: 6190299784453050442, guid: a72f59da83d29bf44bf30b3facb31b8d, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 179001538}
+    - target: {fileID: 6190299784453050442, guid: a72f59da83d29bf44bf30b3facb31b8d, type: 3}
+      propertyPath: maincharacterGameObject
+      value: 
+      objectReference: {fileID: 95499966}
     - target: {fileID: 6546916861233220965, guid: a72f59da83d29bf44bf30b3facb31b8d, type: 3}
       propertyPath: m_Name
       value: doorBlue
@@ -962,6 +1002,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 257753728}
     m_Modifications:
     - target: {fileID: -1712603994561680052, guid: 57a0aa99b27bb6f46aff196d332e263c, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 179001538}
+    - target: {fileID: -1712603994561680052, guid: 57a0aa99b27bb6f46aff196d332e263c, type: 3}
       propertyPath: maincharacterGameObject
       value: 
       objectReference: {fileID: 95499966}
@@ -1017,6 +1061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: keyBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 8446367015222790486, guid: 57a0aa99b27bb6f46aff196d332e263c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57a0aa99b27bb6f46aff196d332e263c, type: 3}
 --- !u!4 &1570708300 stripped
@@ -1031,6 +1079,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1346489249}
     m_Modifications:
+    - target: {fileID: -29736850811991322, guid: 67e4e0b4807b6ea47bc69f5e97cd67bb, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 179001538}
+    - target: {fileID: -29736850811991322, guid: 67e4e0b4807b6ea47bc69f5e97cd67bb, type: 3}
+      propertyPath: maincharacterGameObject
+      value: 
+      objectReference: {fileID: 95499966}
     - target: {fileID: 3287402314943692477, guid: 67e4e0b4807b6ea47bc69f5e97cd67bb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1094,9 +1150,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1346489249}
     m_Modifications:
     - target: {fileID: -3562419112923764251, guid: 49a28e04f50e73d4dbd9dbe176dc3bcb, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 179001538}
+    - target: {fileID: -3562419112923764251, guid: 49a28e04f50e73d4dbd9dbe176dc3bcb, type: 3}
       propertyPath: clonedKeyPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -3562419112923764251, guid: 49a28e04f50e73d4dbd9dbe176dc3bcb, type: 3}
+      propertyPath: maincharacterGameObject
+      value: 
+      objectReference: {fileID: 95499966}
     - target: {fileID: 6546916861233220965, guid: 49a28e04f50e73d4dbd9dbe176dc3bcb, type: 3}
       propertyPath: m_Name
       value: doorsRed
@@ -1107,7 +1171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8189333380061902677, guid: 49a28e04f50e73d4dbd9dbe176dc3bcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.82
+      value: 5.38
       objectReference: {fileID: 0}
     - target: {fileID: 8189333380061902677, guid: 49a28e04f50e73d4dbd9dbe176dc3bcb, type: 3}
       propertyPath: m_LocalPosition.y

@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: maincharacter
       value: 
       objectReference: {fileID: 1161720854}
+    - target: {fileID: 7882613295264647944, guid: 5483976c92c46b74fbd582f9d033c758, type: 3}
+      propertyPath: maincharacterGameObject
+      value: 
+      objectReference: {fileID: 1161720854}
     - target: {fileID: 7994119071983288100, guid: 5483976c92c46b74fbd582f9d033c758, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1172,6 +1176,10 @@ PrefabInstance:
       propertyPath: maincharacter
       value: 
       objectReference: {fileID: 1161720854}
+    - target: {fileID: -4600510435067228030, guid: cae8ea1a8c9690c40b8da7c2ab71410c, type: 3}
+      propertyPath: maincharacterGameObject
+      value: 
+      objectReference: {fileID: 1161720854}
     - target: {fileID: 244913096254426425, guid: cae8ea1a8c9690c40b8da7c2ab71410c, type: 3}
       propertyPath: m_Name
       value: Weapon4
@@ -1426,6 +1434,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -261440355110544485, guid: fed8fe47f06286143ab10eaf8e57d513, type: 3}
       propertyPath: maincharacter
+      value: 
+      objectReference: {fileID: 1161720854}
+    - target: {fileID: -261440355110544485, guid: fed8fe47f06286143ab10eaf8e57d513, type: 3}
+      propertyPath: maincharacterGameObject
       value: 
       objectReference: {fileID: 1161720854}
     - target: {fileID: 7722502911012834085, guid: fed8fe47f06286143ab10eaf8e57d513, type: 3}
@@ -1757,6 +1769,10 @@ PrefabInstance:
       propertyPath: maincharacter
       value: 
       objectReference: {fileID: 1161720854}
+    - target: {fileID: -8178777001981211260, guid: 65d3d16441967a74d9e845cca4c9fddf, type: 3}
+      propertyPath: maincharacterGameObject
+      value: 
+      objectReference: {fileID: 1161720854}
     - target: {fileID: 826137571574391194, guid: 65d3d16441967a74d9e845cca4c9fddf, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1881,17 +1897,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1618323279}
     m_Modifications:
-    - target: {fileID: -7277360175998017759, guid: f483ac9608267e94dad170684567c5af, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 194973642445779270, guid: f483ac9608267e94dad170684567c5af, type: 3}
       propertyPath: m_Name
       value: AnimatedGreenChest
-      objectReference: {fileID: 0}
-    - target: {fileID: 194973642445779270, guid: f483ac9608267e94dad170684567c5af, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8067211167082976425, guid: f483ac9608267e94dad170684567c5af, type: 3}
       propertyPath: m_RootOrder
@@ -1949,14 +1957,6 @@ PrefabInstance:
     - target: {fileID: 780537630395436162, guid: c1ec0944aab8ddc4e90ba0b7055980df, type: 3}
       propertyPath: m_Name
       value: AnimatedPurpleChest
-      objectReference: {fileID: 0}
-    - target: {fileID: 780537630395436162, guid: c1ec0944aab8ddc4e90ba0b7055980df, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3939792169480882148, guid: c1ec0944aab8ddc4e90ba0b7055980df, type: 3}
-      propertyPath: m_BodyType
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5070327640024879565, guid: c1ec0944aab8ddc4e90ba0b7055980df, type: 3}
       propertyPath: m_RootOrder
@@ -2016,17 +2016,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1618323279}
     m_Modifications:
-    - target: {fileID: -5760254793258118815, guid: c747ca550e0697d48ba451dca77d91e9, type: 3}
-      propertyPath: chestType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 177122454017589145, guid: c747ca550e0697d48ba451dca77d91e9, type: 3}
       propertyPath: m_Name
       value: AnimatedRedChest
-      objectReference: {fileID: 0}
-    - target: {fileID: 177122454017589145, guid: c747ca550e0697d48ba451dca77d91e9, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2901892251045344862, guid: c747ca550e0697d48ba451dca77d91e9, type: 3}
       propertyPath: m_RootOrder
@@ -2071,14 +2063,6 @@ PrefabInstance:
     - target: {fileID: 2901892251045344862, guid: c747ca550e0697d48ba451dca77d91e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586380975088184223, guid: c747ca550e0697d48ba451dca77d91e9, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566968203864668414, guid: c747ca550e0697d48ba451dca77d91e9, type: 3}
-      propertyPath: m_BodyType
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c747ca550e0697d48ba451dca77d91e9, type: 3}
@@ -2146,17 +2130,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1618323279}
     m_Modifications:
-    - target: {fileID: -6001870667239196235, guid: 460c6809831974d4da34ddd080023919, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3016737896403739476, guid: 460c6809831974d4da34ddd080023919, type: 3}
       propertyPath: m_Name
       value: AnimatedBlueChest
-      objectReference: {fileID: 0}
-    - target: {fileID: 3016737896403739476, guid: 460c6809831974d4da34ddd080023919, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7171420514733581268, guid: 460c6809831974d4da34ddd080023919, type: 3}
       propertyPath: m_RootOrder
