@@ -32,28 +32,28 @@ public class PickableItemsKey : PickableItems
                 clonedKeyPrefab = GameObject.Instantiate(keyPrefab,
                   new Vector3(mainCamera.transform.position.x - 8f, mainCamera.transform.position.y + 4.5f, mainCamera.transform.position.z + 1f),
                   Quaternion.identity,mainCamera.transform);
-                clonedKeyPrefab.transform.SetSiblingIndex(0);
+                
                 Destroy(this.gameObject);
                 break;
             case keyTypeSelect.Purple:
                 clonedKeyPrefab = GameObject.Instantiate(keyPrefab,
                   new Vector3(mainCamera.transform.position.x - 8f, mainCamera.transform.position.y + 4f, mainCamera.transform.position.z + 1f),
                   Quaternion.identity, mainCamera.transform);
-                clonedKeyPrefab.transform.SetSiblingIndex(1);
+               
                 Destroy(this.gameObject);
                 break;
             case keyTypeSelect.Green:
                 clonedKeyPrefab = GameObject.Instantiate(keyPrefab,
                   new Vector3(mainCamera.transform.position.x - 8f, mainCamera.transform.position.y + 3.5f, mainCamera.transform.position.z + 1f),
                   Quaternion.identity, mainCamera.transform);
-                clonedKeyPrefab.transform.SetSiblingIndex(2);
+                
                 Destroy(this.gameObject);
                 break;
             case keyTypeSelect.Blue:
                 clonedKeyPrefab = GameObject.Instantiate(keyPrefab,
                   new Vector3(mainCamera.transform.position.x - 8f, mainCamera.transform.position.y + 3f, mainCamera.transform.position.z + 1f),
                   Quaternion.identity, mainCamera.transform);
-                clonedKeyPrefab.transform.SetAsLastSibling();
+                
                 Destroy(this.gameObject);
                 break;
             default:

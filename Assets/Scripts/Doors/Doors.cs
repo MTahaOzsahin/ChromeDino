@@ -14,61 +14,71 @@ public class Doors : MonoBehaviour
     private void Awake()
     {
         objectSelfType = GetComponent<ObjectTypeDetecter>();
+      
     }
     
     
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        List<Component> maincameracomponents = new List<Component>();
 
-        ObjectTypeDetecter objectType = mainCamera.GetComponentInChildren<ObjectTypeDetecter>();
 
-        
+        ObjectTypeDetecter[] objectType = mainCamera.GetComponentsInChildren<ObjectTypeDetecter>();
+
+        maincameracomponents.AddRange(objectType);
 
         if (objectType != null)
         {
-            switch (objectSelfType.objectType)
+            for (int i = 0; i < 5; i++)
             {
-                case ObjectTypeDetecter.ObjectType.red:
-                    if (objectSelfType.objectType == objectType.objectType)
-                    {
-                        Destroy(this.gameObject);
-                        mainCamera.transform.GetChild(0).gameObject.SetActive(false);
-                    }
-                    break;
-                case ObjectTypeDetecter.ObjectType.purple:
-                    if (objectSelfType.objectType == objectType.objectType)
-                    {
-                        Destroy(this.gameObject);
-                        mainCamera.transform.GetChild(1).gameObject.SetActive(false);
 
-                    }
-                    break;
-                case ObjectTypeDetecter.ObjectType.green:
-                    if (objectSelfType.objectType == objectType.objectType)
-                    {
-                        Destroy(this.gameObject);
-                        mainCamera.transform.GetChild(2).gameObject.SetActive(false);
 
-                    }
-                    break;
-                case ObjectTypeDetecter.ObjectType.blue:
-                    if (objectSelfType.objectType == objectType.objectType)
-                    {
-                        Destroy(this.gameObject);
-                        mainCamera.transform.GetChild(3).gameObject.SetActive(false);
 
-                    }
-                    break;
-                
-                
-                default:
-                    break;
+                switch (objectSelfType.objectType)
+                {
+                    case ObjectTypeDetecter.ObjectType.red:
+                        if (objectSelfType.objectType == maincameracomponents)
+                        {
+                            Destroy(this.gameObject);
+                            mainCamera.transform.GetChild(0).gameObject.SetActive(false);
+                        }
+                        break;
+                    case ObjectTypeDetecter.ObjectType.purple:
+                        if (objectSelfType.objectType == objectType.objectType)
+                        {
+                            Destroy(this.gameObject);
+                            mainCamera.transform.GetChild(1).gameObject.SetActive(false);
+
+                        }
+                        break;
+                    case ObjectTypeDetecter.ObjectType.green:
+                        if (objectSelfType.objectType == objectType.objectType)
+                        {
+                            Destroy(this.gameObject);
+                            mainCamera.transform.GetChild(2).gameObject.SetActive(false);
+
+                        }
+                        break;
+                    case ObjectTypeDetecter.ObjectType.blue:
+                        if (objectSelfType.objectType == objectType.objectType)
+                        {
+                            Destroy(this.gameObject);
+                            mainCamera.transform.GetChild(3).gameObject.SetActive(false);
+
+                        }
+                        break;
+
+
+                    default:
+                        break;
+                }
+                doorUnlocked?.Invoke();
             }
-            doorUnlocked?.Invoke();
+
         }
+
     }
-    
-    
+
+
 }
