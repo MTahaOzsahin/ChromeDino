@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7492380194943517201}
   - component: {fileID: -5751663792725416307}
   - component: {fileID: -9147362697781646195}
-  - component: {fileID: 3776909069843285966}
-  m_Layer: 0
+  - component: {fileID: 7135709953918197059}
+  m_Layer: 10
   m_Name: WeaponEnemyShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,14 +145,14 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3776909069843285966
+--- !u!114 &7135709953918197059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,23 +161,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 6786598595347564198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548747d457c18144c952b65911c4f77f, type: 3}
+  m_Script: {fileID: 11500000, guid: f1a79bd408e668541b36f0b1882fc888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  itemcollider2d: {fileID: 0}
-  maincharacter: {fileID: 0}
+  objectSpriteRenderer: {fileID: 0}
+  objectCollider2D: {fileID: 0}
+  maincharacterGameObject: {fileID: 0}
   ChildList: []
   MainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 0
   Weapon: {fileID: 0}
-  particleSystemeffect: {fileID: 0}
   WeaponShot: {fileID: 0}
   WeaponShotClone: {fileID: 0}
   DamageableLayerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   WeaponShotCloneSp: {fileID: 0}
   WeaponShotCloneObject: {fileID: 6786598595347564198}
   MainCharacterDamageLayer:

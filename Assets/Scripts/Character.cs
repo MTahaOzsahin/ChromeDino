@@ -58,7 +58,7 @@ public class Character : Health, IChildCheckList, IHitEffect
             if (timer >= time)
             {
                 ShieldClone = GameObject.Instantiate(maincharactershield, maincharactertransform.position, Quaternion.identity, maincharactertransform);
-                Destroy(ShieldClone, 1.1f);
+                Destroy(ShieldClone, 1.7f);
                 timer = 0;
             }
            

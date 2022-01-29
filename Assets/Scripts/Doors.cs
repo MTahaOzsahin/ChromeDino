@@ -21,24 +21,23 @@ public class Doors : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        List<Component> maincameracomponents = new List<Component>();
+        
 
 
-        ObjectTypeDetecter[] objectType = mainCamera.GetComponentsInChildren<ObjectTypeDetecter>();
+        ObjectTypeDetecter objectType = mainCamera.GetComponentInChildren<ObjectTypeDetecter>();
 
-        maincameracomponents.AddRange(objectType);
+       
 
         if (objectType != null)
         {
-            for (int i = 0; i < 5; i++)
-            {
+           
 
 
 
                 switch (objectSelfType.objectType)
                 {
                     case ObjectTypeDetecter.ObjectType.red:
-                        if (objectSelfType.objectType == maincameracomponents)
+                        if (objectSelfType.objectType == objectType.objectType)
                         {
                             Destroy(this.gameObject);
                             mainCamera.transform.GetChild(0).gameObject.SetActive(false);
@@ -74,7 +73,7 @@ public class Doors : MonoBehaviour
                         break;
                 }
                 doorUnlocked?.Invoke();
-            }
+            
 
         }
 

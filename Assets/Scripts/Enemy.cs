@@ -16,7 +16,7 @@ public class Enemy : Health , IHitEffect
     [SerializeField] GameObject EnemyShot;
     private GameObject EnemyShotClone;
 
-    float time = 3f;
+    float time = 4f;
     float timer;
 
     public enum EnemyType { yellow, grey, greyar,greenar};

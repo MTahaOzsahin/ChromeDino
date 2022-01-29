@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2720305814242953912}
   m_Layer: 9
   m_Name: EnemyKnight_Yellow
-  m_TagString: Untagged
+  m_TagString: enemys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   EnemyGameObject: {fileID: 7559143575955933121}
   EnemyRigiBody2D: {fileID: 0}
   EnemySpriteRenderer: {fileID: 7674822104780691732}
+  EnemyTransform: {fileID: 0}
   MainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096

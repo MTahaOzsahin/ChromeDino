@@ -19,6 +19,7 @@ TagManager:
   - greenKey
   - purpleKey
   - blueKey
+  - enemys
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Teleport
   - Keys
   - Damageable
-  - 
+  - EnemyShot
   - 
   - MainCharacter
   - 
