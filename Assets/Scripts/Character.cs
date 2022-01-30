@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : Health, IChildCheckList, IHitEffect
+public class Character : Health, IChildCheckList, IHitEffect ,IDeathEffect
 {
     [Header("Components")]
     public Animator animator;
@@ -168,7 +168,11 @@ public class Character : Health, IChildCheckList, IHitEffect
     }
     public override void OnDeath()
     {
-        base.OnDeath();
+        if (CheckIfDead())
+        {
+            DeathEffect();
+            Destroy(gameObject, 1.1f);
+        }
     }
     public void HitEffect()
     {
@@ -190,5 +194,16 @@ public class Character : Health, IChildCheckList, IHitEffect
         
            ShieldUp();
         
+    }
+
+    public void DeathEffect()
+    {
+        Tween rotateTween = maincharactertransform.DORotate(new Vector3(0, 0, 90f), 1f, RotateMode.Fast);
+
+        Tween scaleTween = maincharactertransform.DOScale(2f, 1f);
+        Tween colorTween = maincharacterSpriteRenderer.DOBlendableColor(Color.red, 0.2f);
+        
+
+        DOTween.KillAll(true, 1f);
     }
 }

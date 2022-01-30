@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int ObjectHealth;
+    public int objectHealth;
     
    
 
@@ -13,14 +13,14 @@ public class Health : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
        
-        ObjectHealth -= damage;
+        objectHealth -= damage;
     }
     public virtual bool CheckIfDead()
     {
        
-        if (ObjectHealth <=0)
+        if (objectHealth <=0)
         {
-            ObjectHealth = 0;
+            objectHealth = 0;
             return true;
         }
         return false;
@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
     {
         if (CheckIfDead())
         {
-            Destroy(gameObject);
+            Destroy(gameObject,1.1f);
         }
     }
     private void FixedUpdate()

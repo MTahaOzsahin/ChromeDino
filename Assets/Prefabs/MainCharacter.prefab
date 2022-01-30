@@ -172,10 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c9d08f853309b41b285b29e26539e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectHealth: 100
+  objectHealth: 100
   animator: {fileID: 0}
-  Charachterrb2D: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  maincharacterRigibody2D: {fileID: 0}
+  maincharacterSpriteRenderer: {fileID: 0}
   maincharactertransform: {fileID: 0}
   maincharactershield: {fileID: 2076010927427675590, guid: 76465926f65ec9d4fa8cda675332513b, type: 3}
   teleportLayerMask:

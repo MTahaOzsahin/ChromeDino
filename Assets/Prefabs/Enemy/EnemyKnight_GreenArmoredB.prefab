@@ -145,17 +145,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57915b29f4e3f749aec13f7d1397d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectHealth: 100
-  EnemyAnimator: {fileID: 0}
-  EnemyGameObject: {fileID: 678689061765370680}
-  EnemyRigiBody2D: {fileID: 0}
-  EnemySpriteRenderer: {fileID: 1100236056252595742}
-  EnemyTransform: {fileID: 0}
-  MainCharacterLayerMask:
+  objectHealth: 100
+  enemyAnimator: {fileID: 0}
+  enemyGameObject: {fileID: 678689061765370680}
+  enemyRigiBody2D: {fileID: 0}
+  enemySpriteRenderer: {fileID: 0}
+  enemyTransform: {fileID: 0}
+  mainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  MainCharacterGameObject: {fileID: 0}
-  EnemyShot: {fileID: 2918420384505951616, guid: 63f0485fb9a08114b8bfffb30571f683, type: 3}
+  mainCharacterGameObject: {fileID: 0}
+  enemyShot: {fileID: 2918420384505951616, guid: 63f0485fb9a08114b8bfffb30571f683, type: 3}
   enemytype: 3
 --- !u!95 &8465609905331254397
 Animator:

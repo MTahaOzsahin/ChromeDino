@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380355c71c40c9e439fa16504a86b94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectHealth: 50
+  objectHealth: 50
   chesanimator: {fileID: 0}
 --- !u!114 &2292494850808359173
 MonoBehaviour:

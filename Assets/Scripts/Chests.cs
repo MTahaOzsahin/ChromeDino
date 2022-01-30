@@ -35,7 +35,7 @@ public class Chests : Health , IHitEffect
                 case ObjectTypeDetecter.ObjectType.red:
                     if (objectSelfType.objectType == ObjectTypeDetecter.ObjectType.red)
                     {
-                        ObjectHealth -= DamagefromMagicShot;                       
+                        objectHealth -= DamagefromMagicShot;                       
                         Destroy(collision.gameObject);
                         HitEffect();
                     }
@@ -44,7 +44,7 @@ public class Chests : Health , IHitEffect
                 case ObjectTypeDetecter.ObjectType.blue:
                     if (objectSelfType.objectType == ObjectTypeDetecter.ObjectType.blue)
                     {
-                        ObjectHealth -= DamagefromMagicShot;
+                        objectHealth -= DamagefromMagicShot;
                         Destroy(collision.gameObject);
                         HitEffect();
                     }
@@ -53,7 +53,7 @@ public class Chests : Health , IHitEffect
                 case ObjectTypeDetecter.ObjectType.purple:
                     if (objectSelfType.objectType == ObjectTypeDetecter.ObjectType.purple)
                     {
-                        ObjectHealth -= DamagefromMagicShot;
+                        objectHealth -= DamagefromMagicShot;
                         Destroy(collision.gameObject);
                         HitEffect();
                     }
@@ -62,7 +62,7 @@ public class Chests : Health , IHitEffect
                 case ObjectTypeDetecter.ObjectType.green:
                     if (objectSelfType.objectType == ObjectTypeDetecter.ObjectType.green)
                     {
-                        ObjectHealth -= DamagefromMagicShot;
+                        objectHealth -= DamagefromMagicShot;
                         Destroy(collision.gameObject);
                         HitEffect();
                     }

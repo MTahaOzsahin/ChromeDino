@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 2086565087312756537, guid: 029f8a8e01e54af43b63092242b6e9db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.99999994, b: 0.99999994, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -145,17 +145,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57915b29f4e3f749aec13f7d1397d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectHealth: 100
-  EnemyAnimator: {fileID: 0}
-  EnemyGameObject: {fileID: 7559143575955933121}
-  EnemyRigiBody2D: {fileID: 0}
-  EnemySpriteRenderer: {fileID: 7674822104780691732}
-  EnemyTransform: {fileID: 0}
-  MainCharacterLayerMask:
+  objectHealth: 100
+  enemyAnimator: {fileID: 0}
+  enemyGameObject: {fileID: 7559143575955933121}
+  enemyRigiBody2D: {fileID: 0}
+  enemySpriteRenderer: {fileID: 0}
+  enemyTransform: {fileID: 0}
+  mainCharacterLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  MainCharacterGameObject: {fileID: 0}
-  EnemyShot: {fileID: 6786598595347564198, guid: dc0e9d4efc7abb7489427aa158f17ffe, type: 3}
+  mainCharacterGameObject: {fileID: 0}
+  enemyShot: {fileID: 6786598595347564198, guid: dc0e9d4efc7abb7489427aa158f17ffe, type: 3}
   enemytype: 0
 --- !u!95 &2720305814242953912
 Animator:

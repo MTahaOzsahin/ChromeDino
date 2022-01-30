@@ -3,18 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Health , IHitEffect
+public class Enemy : Health , IHitEffect ,IDeathEffect
 {
-    [SerializeField] Animator EnemyAnimator;
-    [SerializeField] GameObject EnemyGameObject;
-    [SerializeField] Rigidbody2D EnemyRigiBody2D;
-    [SerializeField] SpriteRenderer EnemySpriteRenderer;
-    [SerializeField] Transform EnemyTransform;
-    [SerializeField] LayerMask MainCharacterLayerMask;
+    [SerializeField] Animator enemyAnimator;
+    [SerializeField] GameObject enemyGameObject;
+    [SerializeField] Rigidbody2D enemyRigiBody2D;
+    [SerializeField] SpriteRenderer enemySpriteRenderer;
+    [SerializeField] Transform enemyTransform;
+    [SerializeField] LayerMask mainCharacterLayerMask;
 
-    [SerializeField] GameObject MainCharacterGameObject;
-    [SerializeField] GameObject EnemyShot;
-    private GameObject EnemyShotClone;
+    [SerializeField] GameObject mainCharacterGameObject;
+    [SerializeField] GameObject enemyShot;
+    private GameObject enemyShotClone;
 
     float time = 4f;
     float timer;
@@ -27,9 +27,10 @@ public class Enemy : Health , IHitEffect
    
     private void Awake()
     {
-        EnemyAnimator = GetComponent<Animator>();      
-        EnemyRigiBody2D = GetComponent<Rigidbody2D>();
-        EnemyTransform = GetComponent<Transform>();
+        enemyAnimator = GetComponent<Animator>();      
+        enemyRigiBody2D = GetComponent<Rigidbody2D>();
+        enemyTransform = GetComponent<Transform>();
+        enemySpriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Start()
     {
@@ -48,8 +49,8 @@ public class Enemy : Health , IHitEffect
     {
         if (CheckIfDead())
         {
-            
-            Destroy(this.gameObject);
+            DeathEffect();
+            Destroy(gameObject,1.1f);
         }
     }
     private void PlayAnimationBasedOnState()
@@ -68,11 +69,11 @@ public class Enemy : Health , IHitEffect
     }
     void PlayIdleAnim()
     {
-        EnemyAnimator.SetBool("IsWalking", false);
+        enemyAnimator.SetBool("IsWalking", false);
     }
     void PlayWalkingAnim()
     {
-        EnemyAnimator.SetBool("IsWalking", true);
+        enemyAnimator.SetBool("IsWalking", true);
     }
     void SetMovementState (EnemyMovementState enemyMovementState)
     {
@@ -80,7 +81,7 @@ public class Enemy : Health , IHitEffect
     }
     void SetEnemyState()
     {
-       if (EnemyRigiBody2D.velocity.x < 1 && EnemyRigiBody2D.velocity.x > -1)
+       if (enemyRigiBody2D.velocity.x < 1 && enemyRigiBody2D.velocity.x > -1)
         {
             SetMovementState(EnemyMovementState.idle);
         }
@@ -95,11 +96,11 @@ public class Enemy : Health , IHitEffect
         timer += Time.deltaTime;
         if (timer >= time)
         {
-            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                new Vector3(EnemyTransform.position.x - 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                , Quaternion.identity, EnemyTransform);
-            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
-            Destroy(EnemyShotClone, 2f);
+            enemyShotClone = GameObject.Instantiate(enemyShot,
+                new Vector3(enemyTransform.position.x - 1f, enemyTransform.position.y, enemyTransform.position.z)
+                , Quaternion.identity, enemyTransform);
+            enemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(-5, 0);
+            Destroy(enemyShotClone, 2f);
             timer = 0;
         }
     }
@@ -108,11 +109,11 @@ public class Enemy : Health , IHitEffect
         timer += Time.deltaTime;
         if (timer >= time)
         {
-            EnemyShotClone = GameObject.Instantiate(EnemyShot,
-                new Vector3(EnemyTransform.position.x + 1f, EnemyTransform.position.y, EnemyTransform.position.z)
-                , Quaternion.identity, EnemyTransform);
-            EnemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
-            Destroy(EnemyShotClone, 2f);
+            enemyShotClone = GameObject.Instantiate(enemyShot,
+                new Vector3(enemyTransform.position.x + 1f, enemyTransform.position.y, enemyTransform.position.z)
+                , Quaternion.identity, enemyTransform);
+            enemyShotClone.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
+            Destroy(enemyShotClone, 2f);
             timer = 0;
         }
     }
@@ -121,7 +122,7 @@ public class Enemy : Health , IHitEffect
     void EnemyManager()
     {
         timer += Time.deltaTime;
-        Collider2D collider2D = Physics2D.OverlapBox(EnemySpriteRenderer.bounds.center,new Vector2 (15f,1f), 0f, MainCharacterLayerMask);
+        Collider2D collider2D = Physics2D.OverlapBox(enemySpriteRenderer.bounds.center,new Vector2 (15f,1f), 0f, mainCharacterLayerMask);
         if (collider2D == null)
         {
             return;
@@ -132,7 +133,7 @@ public class Enemy : Health , IHitEffect
             switch (enemytype)
             {
                 case EnemyType.yellow:
-                    if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+                    if (enemyGameObject.transform.position.x > mainCharacterGameObject.transform.position.x)
                     {
                         LeftAttack();
                     }
@@ -144,7 +145,7 @@ public class Enemy : Health , IHitEffect
 
                     break;
                 case EnemyType.grey:
-                    if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+                    if (enemyGameObject.transform.position.x > mainCharacterGameObject.transform.position.x)
                     {
                         LeftAttack();
                     }
@@ -154,32 +155,32 @@ public class Enemy : Health , IHitEffect
                     }
                     break;
                 case EnemyType.greyar:
-                    if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+                    if (enemyGameObject.transform.position.x > mainCharacterGameObject.transform.position.x)
                     {
-                        EnemyGameObject.transform.eulerAngles = new Vector2(0, 180);
-                        EnemyRigiBody2D.velocity = new Vector2(-1, 0);
+                        enemyGameObject.transform.eulerAngles = new Vector2(0, 180);
+                        enemyRigiBody2D.velocity = new Vector2(-1, 0);
                         LeftAttack();
 
 
                     }
                     else
                     {
-                        EnemyGameObject.transform.eulerAngles = new Vector2(0, 0);
-                        EnemyRigiBody2D.velocity = new Vector2(1, 0);
+                        enemyGameObject.transform.eulerAngles = new Vector2(0, 0);
+                        enemyRigiBody2D.velocity = new Vector2(1, 0);
                         RightAttack();
                     }
                     break;
                 case EnemyType.greenar:
-                    if (EnemyGameObject.transform.position.x > MainCharacterGameObject.transform.position.x)
+                    if (enemyGameObject.transform.position.x > mainCharacterGameObject.transform.position.x)
                     {
-                        EnemyGameObject.transform.eulerAngles = new Vector2(0, 180);
-                        EnemyRigiBody2D.velocity = new Vector2(-1, 0);
+                        enemyGameObject.transform.eulerAngles = new Vector2(0, 180);
+                        enemyRigiBody2D.velocity = new Vector2(-1, 0);
                         LeftAttack();
                     }
                     else
                     {
-                        EnemyGameObject.transform.eulerAngles = new Vector2(0, 0);
-                        EnemyRigiBody2D.velocity = new Vector2(1, 0);
+                        enemyGameObject.transform.eulerAngles = new Vector2(0, 0);
+                        enemyRigiBody2D.velocity = new Vector2(1, 0);
                         RightAttack();
                     }
                     break;
@@ -190,9 +191,9 @@ public class Enemy : Health , IHitEffect
         }
         
     }
-   
-   
     
+
+
     private void Update()
     {       
         SetEnemyState();        
@@ -206,8 +207,17 @@ public class Enemy : Health , IHitEffect
 
     public void HitEffect()
     {
-        EnemyTransform.DOShakePosition(0.3f, new Vector3(0.3f, 0.1f, 0), 10, 50);
-        Tween colorTween = EnemySpriteRenderer.DOBlendableColor(Color.red, 0.2f);
-        colorTween.OnComplete(() => EnemySpriteRenderer.DOBlendableColor(Color.white, 0.05f));
+        enemyTransform.DOShakePosition(0.3f, new Vector3(0.3f, 0.1f, 0), 10, 50);
+        Tween colorTween = enemySpriteRenderer.DOBlendableColor(Color.red, 0.2f);
+        colorTween.OnComplete(() => enemySpriteRenderer.DOBlendableColor(Color.white, 0.05f));
+    }
+
+    public void DeathEffect()
+    {
+        Tween rotateTween = enemyTransform.DORotate(new Vector3(0, 0, 90f), 1f, RotateMode.Fast);
+
+        Tween scaleTween = enemyTransform.DOScale(0.8f, 1f);
+
+        DOTween.KillAll(true, 1f);
     }
 }
